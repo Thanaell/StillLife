@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
     Vector3 forward, right, lastPosition;
 
-    string spriteNames="diamonds3sprites";
+    string spriteNames="AllSprites";
 	SpriteRenderer spriteR;
 	Sprite[] sprites;
 	Animator anim;
@@ -59,8 +59,8 @@ public class Move : MonoBehaviour
             if(upMovement!=Vector3.zero){
 			    if(rightMovement!=Vector3.zero){
 				    //spriteR.sprite=sprites[1];
-                    anim.SetBool("isMovingDiagonal",true);
-                    anim.SetTrigger("moveDiagonal");
+                    anim.SetBool("isMovingSide",true);
+                    //anim.SetTrigger("moveHorizontal");
 			    }
 			    else{
 				    //spriteR.sprite=sprites[0];
