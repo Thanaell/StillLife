@@ -24,7 +24,10 @@ public class InteractiveObject : MonoBehaviour {
                 {
                     if(dailyTask.hintAudio)
                     {
-                        SoundManager.Instance.GetComponent<AudioSource>().clip = dailyTask.hintAudio;
+                        if (DayManager.Instance.muffledSound)
+                            SoundManager.Instance.GetComponent<AudioSource>().clip = dailyTask.hintAudioMuffled;
+                        else
+                            SoundManager.Instance.GetComponent<AudioSource>().clip = dailyTask.hintAudio;
                         SoundManager.Instance.GetComponent<AudioSource>().Play();
                     }
                     dailyTask.DisplayHint();

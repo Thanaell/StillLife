@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114820745459054732}
   - component: {fileID: 114708021120374474}
   - component: {fileID: 114606614603161234}
+  - component: {fileID: 114800085531654520}
+  - component: {fileID: 82723998763089552}
   m_Layer: 0
   m_Name: DayManager
   m_TagString: Untagged
@@ -42,6 +44,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82723998763089552
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114606614603161234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,6 +155,9 @@ MonoBehaviour:
   animationTime: 2.5
   hintAudio: {fileID: 8300000, guid: 603c59fb0fb72c04ca70501e6513af40, type: 3}
   progressAudio: {fileID: 8300000, guid: 4a522e9d55ba56b4bb1b01bb6c4c3461, type: 3}
+  hintAudioMuffled: {fileID: 8300000, guid: 437bf9eee6f8bc94787a4e3b51636488, type: 3}
+  progressAudioMuffled: {fileID: 8300000, guid: 8af0aa701c22a4a458b6f793bf455a07,
+    type: 3}
   hintText: Arroser la plante ?
   succesText: "Plante arros\xE9e"
 --- !u!114 &114708021120374474
@@ -72,11 +172,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   complete: 0
-  dailyTaskType: 0
+  dailyTaskType: 2
   animationTime: 2.5
   hintAudio: {fileID: 0}
   progressAudio: {fileID: 0}
-  hintText: 
+  hintAudioMuffled: {fileID: 0}
+  progressAudioMuffled: {fileID: 0}
+  hintText: Dormir ?
+  succesText: 
+--- !u!114 &114800085531654520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  dailyTaskType: 0
+  animationTime: 2.5
+  hintAudio: {fileID: 0}
+  progressAudio: {fileID: 8300000, guid: 3f7b2fff4c7394f42bb26a8bbc5ccd2c, type: 3}
+  hintAudioMuffled: {fileID: 0}
+  progressAudioMuffled: {fileID: 8300000, guid: 0b10a1fd43e39f743a65add40762ccb5,
+    type: 3}
+  hintText: Allumer radio ?
   succesText: 
 --- !u!114 &114820745459054732
 MonoBehaviour:
@@ -94,10 +217,14 @@ MonoBehaviour:
   - {fileID: 0}
   dailyTasks:
   - {fileID: 114606614603161234}
+  - {fileID: 114708021120374474}
+  - {fileID: 114800085531654520}
   numberOfTasksCompleted: 0
   currentDay: {fileID: 0}
   inputDelay: 0
   blurringLevel: 0
   inversedInput: 0
-  noiseLevel: 0
+  muffledSound: 0
   fieldOfView: 0
+  nightTime: 4
+  nightCanvas: {fileID: 0}

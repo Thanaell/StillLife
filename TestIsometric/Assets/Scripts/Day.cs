@@ -10,7 +10,8 @@ public class Day : MonoBehaviour {
     public float inputDelay;
     public float blurringLevel;
     public bool inversedInput;
-    public float noiseLevel;
     public float fieldOfView;
+    public bool muffledSound;
     public AudioClip audioclip;
+    public AudioClip audioclipMuffled;
 }
