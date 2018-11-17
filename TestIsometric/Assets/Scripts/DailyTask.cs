@@ -23,10 +23,12 @@ public class DailyTask : MonoBehaviour {
     public string hintText;
     public string succesText;
 
-    //Animator anim;
+    Animator anim;
+    GameObject character;
 
 	// Use this for initialization
 	void Start () {	
+        
         //anim=character.GetComponent<Animator>();	
 	}
 	
