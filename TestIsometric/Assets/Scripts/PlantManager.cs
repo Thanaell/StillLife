@@ -11,7 +11,7 @@ public class PlantManager : Singleton<PlantManager> {
     void Start() {
         sprites = Resources.LoadAll<Sprite>(spriteNames);
         myPlantSprite = GetComponent<SpriteRenderer>();
-        myPlantSprite.sprite = sprites[0];
+        myPlantSprite.sprite = sprites[0];  
 
     }
 
