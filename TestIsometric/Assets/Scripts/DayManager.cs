@@ -11,9 +11,8 @@ public class DayManager : Singleton<DayManager> {
 
     public Day currentDay;
     public float inputDelay;
-    public float blurringLevel;
     public bool inversedInput;
-    public float noiseLevel;
+    public bool muffledSound;
     public float fieldOfView;
     public float nightTime = 4f;
 
@@ -41,15 +40,15 @@ public class DayManager : Singleton<DayManager> {
     public IEnumerator NextDay()
     {
         StartCoroutine(ScreenFadeIn(nightTime / 2));
-        yield return new WaitForSecondsRealtime(nightTime);
+        yield return new WaitForSecondsRealtime(nightTime/2);
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
+        audioSource.clip = currentDay.audioclip;
+        audioSource.Play();
         inputDelay = currentDay.inputDelay;
-        blurringLevel = currentDay.blurringLevel;
         inversedInput = currentDay.inversedInput;
-        noiseLevel = currentDay.noiseLevel;
-        fieldOfView = currentDay.fieldOfView;
+        muffledSound = currentDay.muffledSound;
         Camera.main.GetComponent<PostProcessingBehaviour>().profile = currentDay.postProcessingProfile;
 
         foreach(DailyTask dailyTask in dailyTasks)
