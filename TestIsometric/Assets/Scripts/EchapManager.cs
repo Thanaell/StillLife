@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EchapManager : MonoBehaviour {
     public GameObject menuCanvas;
+    public GameObject creditsImage;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class EchapManager : MonoBehaviour {
             if (menuCanvas.activeSelf)
             {
                 menuCanvas.SetActive(false);
+                creditsImage.SetActive(false);
             }
             else{
                 menuCanvas.SetActive(true);
@@ -28,5 +30,15 @@ public class EchapManager : MonoBehaviour {
     public void OnMenuButtonPressed()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void OnCreditsButtonPressed()
+    {
+        creditsImage.SetActive(true);
+    }
+
+    public void OnExitButton()
+    {
+        Application.Quit();
     }
 }
