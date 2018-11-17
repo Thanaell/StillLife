@@ -11,7 +11,6 @@ public class DayManager : Singleton<DayManager> {
 
     public Day currentDay;
     public float inputDelay;
-    public float blurringLevel;
     public bool inversedInput;
     public bool muffledSound;
     public float fieldOfView;
@@ -48,10 +47,8 @@ public class DayManager : Singleton<DayManager> {
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
         inputDelay = currentDay.inputDelay;
-        blurringLevel = currentDay.blurringLevel;
         inversedInput = currentDay.inversedInput;
         muffledSound = currentDay.muffledSound;
-        fieldOfView = currentDay.fieldOfView;
         Camera.main.GetComponent<PostProcessingBehaviour>().profile = currentDay.postProcessingProfile;
 
         foreach(DailyTask dailyTask in dailyTasks)
