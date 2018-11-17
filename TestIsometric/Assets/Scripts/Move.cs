@@ -69,7 +69,8 @@ public class Move : MonoBehaviour
 			}
 		}
 		else if(rightMovement!=Vector3.zero){
-			spriteR.sprite=sprites[2];
+			//priteR.sprite=sprites[2];
+            anim.SetTrigger("moveSide");
 		}
         }        
     }
