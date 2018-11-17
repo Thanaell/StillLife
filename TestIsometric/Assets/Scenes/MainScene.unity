@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 559810665}
   - component: {fileID: 559810664}
   - component: {fileID: 559810667}
+  - component: {fileID: 559810668}
   m_Layer: 0
   m_Name: flowerpot
   m_TagString: Interactable
@@ -294,10 +295,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559810663}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.02, z: 0.2}
+  m_Size: {x: 3, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &559810665
 SpriteRenderer:
@@ -370,6 +371,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dailyTaskType: 1
+--- !u!135 &559810668
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559810663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.51
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &630358868
 GameObject:
   m_ObjectHideFlags: 0
