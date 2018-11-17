@@ -28,8 +28,8 @@ public class DailyTask : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {	
-        
-        //anim=character.GetComponent<Animator>();	
+        character = GameObject.Find("Character");
+        anim=character.GetComponent<Animator>();	
 	}
 	
 	// Update is called once per frame
@@ -66,7 +66,8 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator WateringCoroutine(float time)
     {
-        //anim.SetBool("isWateringPlant",true);
+        anim.SetBool("isWateringPlant",true);
+        Debug.Log(anim.GetBool("isWateringPlant"));
         if(DayManager.Instance.muffledSound)
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudioMuffled;  
         else
@@ -76,11 +77,13 @@ public class DailyTask : MonoBehaviour {
         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(succesText));
         DayManager.Instance.IncrementTask();
         complete = true;
-        //anim.SetBool("isWateringPlant",false);
+        anim.SetBool("isWateringPlant",false);
     }
 
     public void TurnOnRadio()
     {
+        anim.SetBool("isActivatingRadio",true);
+        anim.SetTrigger("activateRadio");
         if (DayManager.Instance.muffledSound)
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudioMuffled;
         else
