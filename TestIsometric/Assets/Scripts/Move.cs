@@ -27,6 +27,9 @@ public class Move : MonoBehaviour
         spriteR=gameObject.GetComponent<SpriteRenderer>();
 		sprites=Resources.LoadAll<Sprite>(spriteNames);
         anim=GetComponent<Animator>();
+        anim.SetBool("isMovingDiagonal",false);
+        anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingSide",false);
 
     }
 
@@ -38,6 +41,9 @@ public class Move : MonoBehaviour
     void LateUpdate()
     {
         lastPosition = transform.position;
+        anim.SetBool("isMovingDiagonal",false);
+        anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingSide",false);
         if (Input.anyKey)
         {
             Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -52,22 +58,39 @@ public class Move : MonoBehaviour
 
             if(upMovement!=Vector3.zero){
 			    if(rightMovement!=Vector3.zero){
-				    anim.SetTrigger("moveSide");
+				    //spriteR.sprite=sprites[1];
+                    anim.SetBool("isMovingDiagonal",true);
+                    anim.SetTrigger("moveDiagonal");
 			    }
 			    else{
 				    //spriteR.sprite=sprites[0];
-				    anim.SetTrigger("moveFront");
+                    Debug.Log("Up" + upMovement);
+				    anim.SetBool("isMovingFront",true);
+                    anim.SetTrigger("moveFront");
 			    }
 		    }
 		    else if(rightMovement!=Vector3.zero){
-			    spriteR.sprite=sprites[2];
+                Debug.Log("side" + rightMovement);
+                anim.SetBool("isMovingSide", true);
+                anim.SetTrigger("moveSide");
 		    }
-        }
+
+            //if(upMovement==Vector3.zero){
+                //Debug.Log("Up"+ upMovement);
+                //anim.SetBool("isMovingFront",false);
+                //anim.SetBool("isMovingDiagonal",false);
+            //}
+            //if(rightMovement==Vector3.zero){
+            //    Debug.Log("side" + rightMovement);
+                //anim.SetBool("isMovingSide",false);
+                //anim.SetBool("isMovingDiagonal",false);
+            //}
 
         if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
             Debug.Log("I INTERACTED");
             interactiveObject.Interact();
+        }
         }
     }
 
