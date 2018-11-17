@@ -10,6 +10,11 @@ public class Move : MonoBehaviour
 
     Vector3 forward, right, lastPosition;
 
+    string spriteNames="diamonds3sprites";
+	SpriteRenderer spriteR;
+	Sprite[] sprites;
+	Animator anim;
+
     private InteractiveObject interactiveObject = null;
 
     // Use this for initialization
@@ -19,6 +24,9 @@ public class Move : MonoBehaviour
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+        spriteR=gameObject.GetComponent<SpriteRenderer>();
+		sprites=Resources.LoadAll<Sprite>(spriteNames);
+        anim=GetComponent<Animator>();
 
     }
 
@@ -41,14 +49,28 @@ public class Move : MonoBehaviour
 
             Rigidbody rb = GetComponent<Rigidbody>();
 
-            transform.forward = heading;
+            //transform.forward = heading;
             rb.MovePosition(transform.position + rightMovement + upMovement);
+            
 
             if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
             {
                 Debug.Log("I INTERACTED");
                 interactiveObject.Interact();    
             }
+
+            if(upMovement!=Vector3.zero){
+			if(rightMovement!=Vector3.zero){
+				spriteR.sprite=sprites[1];
+			}
+			else{
+				//spriteR.sprite=sprites[0];
+				anim.SetTrigger("moveFront");
+			}
+		}
+		else if(rightMovement!=Vector3.zero){
+			spriteR.sprite=sprites[2];
+		}
         }        
     }
 
