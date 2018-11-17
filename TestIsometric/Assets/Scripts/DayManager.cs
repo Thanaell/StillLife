@@ -18,12 +18,16 @@ public class DayManager : Singleton<DayManager> {
     protected DayManager() { }
 
     private int dayIndex;
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start () {
         dayIndex = 0;
         numberOfTasksCompleted = 0;
         currentDay = days[0];
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = currentDay.audioclip;
+        audioSource.Play();
 	}
 	
 	// Update is called once per frame

@@ -12,4 +12,5 @@ public class Day : MonoBehaviour {
     public bool inversedInput;
     public float noiseLevel;
     public float fieldOfView;
+    public AudioClip audioclip;
 }
