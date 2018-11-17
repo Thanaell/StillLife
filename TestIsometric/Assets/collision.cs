@@ -7,6 +7,9 @@ public class collision : MonoBehaviour {
 	Vector3 speed;
 	public float maxSpeed=5.0f;
 	bool canInteract;
+	string spriteNames="diamonds3sprites";
+	SpriteRenderer spriteR;
+	Sprite[] sprites;
 
 	void OnCollisionEnter (Collision col)
     {
@@ -18,7 +21,8 @@ public class collision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		spriteR=gameObject.GetComponent<SpriteRenderer>();
+		sprites=Resources.LoadAll<Sprite>(spriteNames);
 	}
 	
 	// Update is called once per frame
@@ -31,6 +35,19 @@ public class collision : MonoBehaviour {
 
 		if(canInteract && Input.GetKeyDown(KeyCode.Space)){
 			Debug.Log("I INTERACTED");
+		}
+
+
+		if(speed.z!=0){
+			if(speed.x!=0){
+				spriteR.sprite=sprites[1];
+			}
+			else{
+				spriteR.sprite=sprites[0];
+			}
+		}
+		else if(speed.x!=0){
+			spriteR.sprite=sprites[2];
 		}
 
 		transform.Translate(speed * maxSpeed * Time.deltaTime, Space.Self);
