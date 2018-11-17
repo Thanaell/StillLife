@@ -52,7 +52,7 @@ public class Move : MonoBehaviour
 
             if(upMovement!=Vector3.zero){
 			    if(rightMovement!=Vector3.zero){
-				    spriteR.sprite=sprites[1];
+				    anim.SetTrigger("moveSide");
 			    }
 			    else{
 				    //spriteR.sprite=sprites[0];
