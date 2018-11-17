@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 559810664}
   - component: {fileID: 559810667}
   - component: {fileID: 559810668}
+  - component: {fileID: 559810669}
   m_Layer: 0
   m_Name: FlowerPot
   m_TagString: Interactable
@@ -763,6 +764,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.51
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &559810669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559810663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af92fa437ad6d9498948a0e2abdf5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDayManager: {fileID: 707308615}
 --- !u!1001 &579521681
 Prefab:
   m_ObjectHideFlags: 0
@@ -805,6 +818,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &707308615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+    type: 2}
+  m_PrefabInternal: {fileID: 409775603}
+  m_Script: {fileID: 11500000, guid: 0fb24b1c96c475e40b52f2e7756d1c32, type: 3}
 --- !u!114 &993605334 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,

@@ -23,11 +23,16 @@ public class DayManager : Singleton<DayManager> {
     private int dayIndex;
     private AudioSource audioSource;
 
+
+    private void Awake()
+    {
+        currentDay = days[0];
+    }
     // Use this for initialization
     void Start () {
         dayIndex = 0;
         numberOfTasksCompleted = 0;
-        currentDay = days[0];
+       
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
@@ -44,6 +49,7 @@ public class DayManager : Singleton<DayManager> {
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
+        PlantManager.Instance.ChooseSprite();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
         inputDelay = currentDay.inputDelay;
