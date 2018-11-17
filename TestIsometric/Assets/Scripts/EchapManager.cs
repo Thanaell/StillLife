@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EchapManager : MonoBehaviour {
     public GameObject menuCanvas;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,4 +24,9 @@ public class EchapManager : MonoBehaviour {
                 }
         }
 	}
+
+    public void OnMenuButtonPressed()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
