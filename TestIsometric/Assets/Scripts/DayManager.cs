@@ -40,7 +40,7 @@ public class DayManager : Singleton<DayManager> {
     public IEnumerator NextDay()
     {
         StartCoroutine(ScreenFadeIn(nightTime / 2));
-        yield return new WaitForSecondsRealtime(nightTime);
+        yield return new WaitForSecondsRealtime(nightTime/2);
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
