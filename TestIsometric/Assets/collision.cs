@@ -10,6 +10,7 @@ public class collision : MonoBehaviour {
 	string spriteNames="diamonds3sprites";
 	SpriteRenderer spriteR;
 	Sprite[] sprites;
+	Animator anim;
 
 	void OnCollisionEnter (Collision col)
     {
@@ -23,6 +24,7 @@ public class collision : MonoBehaviour {
 	void Start () {
 		spriteR=gameObject.GetComponent<SpriteRenderer>();
 		sprites=Resources.LoadAll<Sprite>(spriteNames);
+		anim=GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +45,8 @@ public class collision : MonoBehaviour {
 				spriteR.sprite=sprites[1];
 			}
 			else{
-				spriteR.sprite=sprites[0];
+				//spriteR.sprite=sprites[0];
+				anim.SetTrigger("moveFront");
 			}
 		}
 		else if(speed.x!=0){
