@@ -6,6 +6,7 @@ public enum DailyTaskType
 {
     TurnOnRadioTask,
     WarteringPlantTask,
+    Pills,
     Sleep
 }
 
@@ -38,11 +39,13 @@ public class DailyTask : MonoBehaviour {
 
     public void StartTask()
     {
+        FloatingTextManager.Instance.HideText();
+
         switch (dailyTaskType)
         {
             case DailyTaskType.TurnOnRadioTask:
                 Debug.Log("C'EST MOI QUI ALLUME");
-                TurnOnRadio();
+                StartCoroutine(TurnOnRadio());
                 break;
 
             case DailyTaskType.WarteringPlantTask:
@@ -62,6 +65,20 @@ public class DailyTask : MonoBehaviour {
     public void DisplayHint()
     {
         FloatingTextManager.Instance.DisplayText(hintText);
+
+        switch (dailyTaskType)
+        {
+            case DailyTaskType.TurnOnRadioTask:
+                break;
+
+            case DailyTaskType.WarteringPlantTask:
+                StartCoroutine(FloatingTextManager.Instance.DisplayHideText(DayManager.Instance.currentDay.plantHint));
+                break;
+            case DailyTaskType.Sleep:
+                break;
+            default:
+                break;
+        }
     }
 
     public IEnumerator WateringCoroutine(float time)
@@ -80,8 +97,9 @@ public class DailyTask : MonoBehaviour {
         anim.SetBool("isWateringPlant",false);
     }
 
-    public void TurnOnRadio()
+    public IEnumerator TurnOnRadio()
     {
+        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
         anim.SetBool("isActivatingRadio",true);
         anim.SetTrigger("activateRadio");
         if (DayManager.Instance.muffledSound)
@@ -89,6 +107,11 @@ public class DailyTask : MonoBehaviour {
         else
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
+        foreach (string s in sentences)
+        {
+            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
+            yield return new WaitForSecondsRealtime(5.1f);
+        }
         DayManager.Instance.IncrementTask();
         complete = true;
     }
