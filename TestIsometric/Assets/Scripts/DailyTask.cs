@@ -64,15 +64,11 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator WateringCoroutine(float time)
     {
-<<<<<<< HEAD
         //anim.SetBool("isWateringPlant",true);
-        SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
-=======
         if(DayManager.Instance.muffledSound)
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudioMuffled;  
         else
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
->>>>>>> 57750881445325c097b7f90f6927ea058ab44ff3
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         yield return new WaitForSecondsRealtime(time);
         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(succesText));
