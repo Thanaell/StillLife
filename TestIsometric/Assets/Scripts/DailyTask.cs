@@ -107,12 +107,12 @@ public class DailyTask : MonoBehaviour {
         else
             SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
+        complete = true;
         foreach (string s in sentences)
         {
             StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
             yield return new WaitForSecondsRealtime(5.1f);
         }
         DayManager.Instance.IncrementTask();
-        complete = true;
     }
 }
