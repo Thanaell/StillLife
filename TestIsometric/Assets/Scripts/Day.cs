@@ -7,6 +7,7 @@ public class Day : MonoBehaviour {
     public int dayNumber;
     public PostProcessingProfile postProcessingProfile;
     public float inputDelay;
+    public bool interactionSpam;
     public bool inversedInput;
     public bool muffledSound;
     public AudioClip audioclip;

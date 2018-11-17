@@ -18,6 +18,10 @@ public class Move : MonoBehaviour
     private InteractiveObject interactiveObject = null;
 
     bool inversedInput;
+    bool interactionSpam;
+
+    int spaceHits;
+    bool hasRightToInteract;
 
     // Use this for initialization
     void Start()
@@ -32,6 +36,7 @@ public class Move : MonoBehaviour
         anim.SetBool("isMovingRight",false);
         anim.SetBool("isMovingUp",false);
         anim.SetBool("isMovingLeft",false);
+        spaceHits=0;
 
     }
 
@@ -58,6 +63,7 @@ public class Move : MonoBehaviour
             Rigidbody rb = GetComponent<Rigidbody>();
 
             inversedInput=DayManager.Instance.currentDay.inversedInput;
+            interactionSpam=DayManager.Instance.currentDay.interactionSpam;
 
             if(inversedInput){
                 rb.MovePosition(transform.position - rightMovement - upMovement);
@@ -93,11 +99,15 @@ public class Move : MonoBehaviour
             }
         }
 
-
-        if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
+        if(Input.GetKeyUp(KeyCode.Space)){
+            spaceHits++;
+        }
+        canInteract=(!interactionSpam)||(interactionSpam&&spaceHits>5);
+        if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject && canInteract)
         {
             Debug.Log("I INTERACTED");
             interactiveObject.Interact();
+            spaceHits=0;
         }
     }
 

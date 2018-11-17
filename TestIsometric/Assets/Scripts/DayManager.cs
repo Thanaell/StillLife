@@ -15,6 +15,7 @@ public class DayManager : Singleton<DayManager> {
     public bool muffledSound;
     public float fieldOfView;
     public float nightTime = 4f;
+    public bool interactionSpam;
 
     public Canvas nightCanvas;
 
@@ -49,7 +50,8 @@ public class DayManager : Singleton<DayManager> {
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
-        if(dayIndex==4){ currentDay.inversedInput=true;}
+        if(dayIndex>=4){ currentDay.inversedInput=true;} //Changement de contrôles au jour 5
+        if(dayIndex==3){ currentDay.interactionSpam=true;}
         PlantManager.Instance.ChooseSprite();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
