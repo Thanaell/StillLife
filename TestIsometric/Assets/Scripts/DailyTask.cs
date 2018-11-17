@@ -21,8 +21,11 @@ public class DailyTask : MonoBehaviour {
     public string hintText;
     public string succesText;
 
+    //Animator anim;
+
 	// Use this for initialization
-	void Start () {		
+	void Start () {	
+        //anim=character.GetComponent<Animator>();	
 	}
 	
 	// Update is called once per frame
@@ -58,11 +61,13 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator WateringCoroutine(float time)
     {
+        //anim.SetBool("isWateringPlant",true);
         SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         yield return new WaitForSecondsRealtime(time);
         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(succesText));
         DayManager.Instance.IncrementTask();
         complete = true;
+        //anim.SetBool("isWateringPlant",false);
     }
 }

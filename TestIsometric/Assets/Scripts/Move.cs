@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
     Vector3 forward, right, lastPosition;
 
-    string spriteNames="AllSprites";
+    string spriteNames="SpriteSheet2";
 	SpriteRenderer spriteR;
 	Sprite[] sprites;
 	Animator anim;
@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
 		sprites=Resources.LoadAll<Sprite>(spriteNames);
         anim=GetComponent<Animator>();
         anim.SetBool("isMovingRight",false);
-        //anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingUp",false);
         anim.SetBool("isMovingLeft",false);
 
     }
@@ -42,7 +42,7 @@ public class Move : MonoBehaviour
     {
         lastPosition = transform.position;
         anim.SetBool("isMovingLeft",false);
-        //anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingUp",false);
         anim.SetBool("isMovingRight",false);
         if (Input.anyKey)
         {
@@ -68,7 +68,7 @@ public class Move : MonoBehaviour
                 else if (upMovement.z>0){
 				    //spriteR.sprite=sprites[0];
                     Debug.Log("Up" + upMovement);
-				    anim.SetBool("isMovingLeft",true);
+				    anim.SetBool("isMovingUp",true);
                     anim.SetTrigger("moveFront");
 			    }
                 else if (upMovement.z<0){
@@ -83,17 +83,6 @@ public class Move : MonoBehaviour
             else if(rightMovement.x<0){
                 anim.SetBool("isMovingLeft", true);
             }
-
-            //if(upMovement==Vector3.zero){
-                //Debug.Log("Up"+ upMovement);
-                //anim.SetBool("isMovingFront",false);
-                //anim.SetBool("isMovingDiagonal",false);
-            //}
-            //if(rightMovement==Vector3.zero){
-            //    Debug.Log("side" + rightMovement);
-                //anim.SetBool("isMovingSide",false);
-                //anim.SetBool("isMovingDiagonal",false);
-            //}
         }
 
 
