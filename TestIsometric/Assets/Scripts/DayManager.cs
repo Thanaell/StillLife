@@ -45,6 +45,28 @@ public class DayManager : Singleton<DayManager> {
 
     public IEnumerator NextDay()
     {
+        foreach (DailyTask dailyTask in dailyTasks)
+        {
+            if(!dailyTask.complete)
+            {
+                switch(dailyTask.dailyTaskType)
+                {
+                    case DailyTaskType.WarteringPlantTask:
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.plantFail, 2f));
+                        yield return new WaitForSecondsRealtime(2.1f);
+                        break;
+                    case DailyTaskType.TurnOnRadioTask:
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.radioFail, 2f));
+                        yield return new WaitForSecondsRealtime(2.1f);
+                        break;
+                    case DailyTaskType.Pills:
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.pillsFail, 2f));
+                        yield return new WaitForSecondsRealtime(2.1f);
+                        break;
+                    default: break;
+                }
+            }
+        }
         StartCoroutine(ScreenFadeIn(nightTime / 2));
         yield return new WaitForSecondsRealtime(nightTime/2);
         dayIndex++;
