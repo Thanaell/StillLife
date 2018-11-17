@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    float moveSpeed = 5f;
+    float moveSpeed = 2f;
     bool canInteract = false;
 
     Vector3 forward, right, lastPosition;
@@ -27,9 +27,9 @@ public class Move : MonoBehaviour
         spriteR=gameObject.GetComponent<SpriteRenderer>();
 		sprites=Resources.LoadAll<Sprite>(spriteNames);
         anim=GetComponent<Animator>();
-        anim.SetBool("isMovingDiagonal",false);
-        anim.SetBool("isMovingFront",false);
-        anim.SetBool("isMovingSide",false);
+        anim.SetBool("isMovingRight",false);
+        //anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingLeft",false);
 
     }
 
@@ -41,9 +41,9 @@ public class Move : MonoBehaviour
     void LateUpdate()
     {
         lastPosition = transform.position;
-        anim.SetBool("isMovingDiagonal",false);
-        anim.SetBool("isMovingFront",false);
-        anim.SetBool("isMovingSide",false);
+        anim.SetBool("isMovingLeft",false);
+        //anim.SetBool("isMovingFront",false);
+        anim.SetBool("isMovingRight",false);
         if (Input.anyKey)
         {
             Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -57,23 +57,32 @@ public class Move : MonoBehaviour
             rb.MovePosition(transform.position + rightMovement + upMovement);
 
             if(upMovement!=Vector3.zero){
-			    if(rightMovement!=Vector3.zero){
+			    if(rightMovement.x>0){
 				    //spriteR.sprite=sprites[1];
-                    anim.SetBool("isMovingSide",true);
+                    anim.SetBool("isMovingRight",true);
                     //anim.SetTrigger("moveHorizontal");
 			    }
-			    else{
+			    else if (rightMovement.x<0){
+                    anim.SetBool("isMovingLeft",true);
+                }
+                else if (upMovement.z>0){
 				    //spriteR.sprite=sprites[0];
                     Debug.Log("Up" + upMovement);
-				    anim.SetBool("isMovingFront",true);
+				    anim.SetBool("isMovingLeft",true);
                     anim.SetTrigger("moveFront");
 			    }
+                else if (upMovement.z<0){
+                    anim.SetBool("isMovingRight",true);
+                }
 		    }
-		    else if(rightMovement!=Vector3.zero){
+		    else if(rightMovement.x>0){
                 Debug.Log("side" + rightMovement);
-                anim.SetBool("isMovingSide", true);
+                anim.SetBool("isMovingRight", true);
                 anim.SetTrigger("moveSide");
 		    }
+            else if(rightMovement.x<0){
+                anim.SetBool("isMovingLeft", true);
+            }
 
             //if(upMovement==Vector3.zero){
                 //Debug.Log("Up"+ upMovement);
