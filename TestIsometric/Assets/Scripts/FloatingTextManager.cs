@@ -6,13 +6,14 @@ public class FloatingTextManager : Singleton<FloatingTextManager> {
 
     protected FloatingTextManager () { }
 
-    public float displayTime = 2f;
+    public float displayTime = 4f;
 
-    private TextMesh textMesh;
+    private TextMesh actions;
+    public TextMesh hint;
 
 	// Use this for initialization
 	void Start () {
-        textMesh = GetComponent<TextMesh>();		
+        actions = GetComponent<TextMesh>();		
 	}
 	
 	// Update is called once per frame
@@ -21,19 +22,26 @@ public class FloatingTextManager : Singleton<FloatingTextManager> {
 
     public void DisplayText(string text) 
     {
-        textMesh.text = text;
+        actions.text = text;
     }
 
     public void HideText()
     {
-        textMesh.text = "";
+        actions.text = "";
     }
 
     public IEnumerator DisplayHideText(string text)
     {
-        textMesh.text = text;
+        hint.text = text;
         yield return new WaitForSecondsRealtime(displayTime);
-        textMesh.text = "";
+        hint.text = "";
+    }
+
+    public IEnumerator DisplayHideText(string text, float time)
+    {
+        hint.text = text;
+        yield return new WaitForSecondsRealtime(time);
+        hint.text = "";
     }
 
 }

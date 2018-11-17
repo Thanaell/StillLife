@@ -113,6 +113,96 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &35607793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1782651225821016, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35607794}
+  - component: {fileID: 35607797}
+  - component: {fileID: 35607796}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &35607794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4091720919837452, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35607793}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalScale: {x: 0.19999999, y: 0.19999997, z: 0.19999999}
+  m_Children: []
+  m_Father: {fileID: 1208056319}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!102 &35607796
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35607793}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 30
+  m_FontStyle: 2
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294903040
+--- !u!23 &35607797
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23707836903763392, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35607793}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1001 &51859240
 Prefab:
   m_ObjectHideFlags: 0
@@ -150,6 +240,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4857020281637964, guid: 0ba05ac8c6d92704bb7d59ff1593695e, type: 2}
       propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506265982286398, guid: 0ba05ac8c6d92704bb7d59ff1593695e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506265982286398, guid: 0ba05ac8c6d92704bb7d59ff1593695e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 114874685724611892, guid: 0ba05ac8c6d92704bb7d59ff1593695e,
+        type: 2}
+      propertyPath: dailyTaskType
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -566,6 +669,11 @@ Prefab:
       propertyPath: days.Array.data[5]
       value: 
       objectReference: {fileID: 993605334}
+    - target: {fileID: 114708021120374474, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: dailyTaskType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
   m_IsPrefabAsset: 0
@@ -682,6 +790,154 @@ Prefab:
     - target: {fileID: 4965207042639568, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: dayNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: dayNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: dayNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: dayNumber
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "Elle ne poussera jamais si tu ne lui donnes pas \xE0 boire"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantFail
+      value: "T\u2019as vraiment pas la main verte\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "Il est dans la fleur de l\u2019\xE2ge. T\u2019as compris ? Fleur, arbre\u2026\xE7a
+        te fait pas rire ? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantFail
+      value: "Tu as besoin d\u2019un rappel ? L\u2019eau va DANS le pot "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "J\u2026elle m\xE9rite mieux que \xE7a "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantFail
+      value: "Tu n\u2019as donc aucune compassion ? Cette pauvre plante\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "Au moins \xE7a ne m\u2019arrivera jamais\u2026Tu ne peux pas faire quelque
+        chose ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantFail
+      value: "Elle est vieille et fatigu\xE9e. Comme toi. Laisse-la mourir. Laisse-moi
+        tranquille. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioFail
+      value: "T\u2019as raison, c\u2019est pas important les actualit\xE9s\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsHint
+      value: "Je suis immortel, pourquoi j\u2019aurais besoin de m\xE9dicaments ? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Une femme a \xE9t\xE9 retrouv\xE9e morte chez elle. Selon la police,
+        elle serait morte de vieillesse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Des similitudes d\xE9couvertes dans plusieurs meurtres \xE0 travers
+        4000 ans de notre histoire."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioFail
+      value: 'Tu veux me faire mourir seul et con ? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Avec le temps va, tout s\u2019en va "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioFail
+      value: 'Et maintenant ? Que vais-je faire ? De tout ce temps ? Que sera ma vie
+        ? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Breaking News : Notre atmosph\xE8re serait compos\xE9e \xE0 37% d\u2019entit\xE9s
+        surnaturelles "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioFail
+      value: "\u2026Pourquoi t\u2019irais pas immortaliser quelqu\u2019un d\u2019autre
+        ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsFail
+      value: "Bon, d\u2019accord, j\u2019ai un rhume\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsHint
+      value: "La pilule bleue\u2026ou la pilule rouge ? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsFail
+      value: "En fait, c\u2019\xE9tait la pilule verte\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsHint
+      value: "Les pilules\u2026c\u2019est pour toi en fait, non ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsFail
+      value: "J\u2019esp\xE8re que c\u2019est pas des pilules pour la m\xE9moire\u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsHint
+      value: "Approche : \xAB C\u2019est l\u2019heure de ton m\xE9dicament, Papi ! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsFail
+      value: "J\u2019esp\xE8re que tu finiras en EHPAD"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
@@ -1073,6 +1329,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1143948977263304, guid: aece2c6ba719a714fa42072496941e4c,
     type: 2}
   m_PrefabInternal: {fileID: 1930153327}
+--- !u!4 &1208056319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4822679807178414, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930153327}
 --- !u!1 &1241457447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1698,22 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1830334317}
   m_CullTransparentMesh: 0
+--- !u!1 &1837278272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1703848236734384, guid: 0ba05ac8c6d92704bb7d59ff1593695e,
+    type: 2}
+  m_PrefabInternal: {fileID: 51859240}
+--- !u!114 &1837278278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837278272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af92fa437ad6d9498948a0e2abdf5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1851472651
 Prefab:
   m_ObjectHideFlags: 0
@@ -1517,6 +1794,32 @@ Prefab:
     - target: {fileID: 4822679807178414, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240592015448710, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: hint
+      value: 
+      objectReference: {fileID: 35607796}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f44de1c305b20a147beaedf394302c12,
+        type: 3}
+    - target: {fileID: 23707836903763392, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Color.rgba
+      value: 4294903040
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
