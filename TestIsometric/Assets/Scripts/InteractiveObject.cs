@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DailyTaskType
-{
-    TurnOnRadioTask,
-    WarteringPlantTask
-}
-
 public class InteractiveObject : MonoBehaviour {
     public DailyTaskType dailyTaskType;
 
@@ -28,8 +22,11 @@ public class InteractiveObject : MonoBehaviour {
             {
                 if (!dailyTask.complete)
                 {
-                    SoundManager.Instance.GetComponent<AudioSource>().clip = dailyTask.hintAudio;
-                    SoundManager.Instance.GetComponent<AudioSource>().Play();
+                    if(dailyTask.hintAudio)
+                    {
+                        SoundManager.Instance.GetComponent<AudioSource>().clip = dailyTask.hintAudio;
+                        SoundManager.Instance.GetComponent<AudioSource>().Play();
+                    }
                     dailyTask.DisplayHint();
                 }
             }

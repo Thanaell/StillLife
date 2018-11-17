@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114263069727617548}
   - component: {fileID: 135005885161997374}
   m_Layer: 0
-  m_Name: flowerpot
+  m_Name: FlowerPot
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

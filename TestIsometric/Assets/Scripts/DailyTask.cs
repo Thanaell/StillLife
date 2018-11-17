@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DailyTaskType
+{
+    TurnOnRadioTask,
+    WarteringPlantTask,
+    Sleep
+}
+
 public class DailyTask : MonoBehaviour {
 
     public bool complete;
@@ -33,6 +40,9 @@ public class DailyTask : MonoBehaviour {
             case DailyTaskType.WarteringPlantTask:
                 Debug.Log("C'EST MOI QUI ARROSE");
                 StartCoroutine(WateringCoroutine(animationTime));
+                break;
+            case DailyTaskType.Sleep:
+                StartCoroutine(DayManager.Instance.NextDay());
                 break;
             default:
                 DayManager.Instance.IncrementTask();
