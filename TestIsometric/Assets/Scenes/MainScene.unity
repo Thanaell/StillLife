@@ -571,6 +571,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: muffledSound
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0

@@ -116,9 +116,10 @@ MonoBehaviour:
   inputDelay: 0
   blurringLevel: 0
   inversedInput: 0
-  noiseLevel: 0
   fieldOfView: 0
+  muffledSound: 1
   audioclip: {fileID: 8300000, guid: 26cdb5439e562d848bcca1210d630787, type: 3}
+  audioclipMuffled: {fileID: 0}
 --- !u!114 &114925035135147390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +136,7 @@ MonoBehaviour:
   inputDelay: 0
   blurringLevel: 0
   inversedInput: 0
-  noiseLevel: 0
   fieldOfView: 0
+  muffledSound: 0
   audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  audioclipMuffled: {fileID: 0}
