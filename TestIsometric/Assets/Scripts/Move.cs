@@ -60,25 +60,19 @@ public class Move : MonoBehaviour
 			    if(rightMovement.x>0){
 				    //spriteR.sprite=sprites[1];
                     anim.SetBool("isMovingRight",true);
-                    //anim.SetTrigger("moveHorizontal");
 			    }
 			    else if (rightMovement.x<0){
                     anim.SetBool("isMovingLeft",true);
                 }
                 else if (upMovement.z>0){
-				    //spriteR.sprite=sprites[0];
-                    Debug.Log("Up" + upMovement);
 				    anim.SetBool("isMovingUp",true);
-                    anim.SetTrigger("moveFront");
 			    }
                 else if (upMovement.z<0){
                     anim.SetBool("isMovingRight",true);
                 }
 		    }
 		    else if(rightMovement.x>0){
-                Debug.Log("side" + rightMovement);
                 anim.SetBool("isMovingRight", true);
-                anim.SetTrigger("moveSide");
 		    }
             else if(rightMovement.x<0){
                 anim.SetBool("isMovingLeft", true);
