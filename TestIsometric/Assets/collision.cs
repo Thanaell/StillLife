@@ -33,7 +33,7 @@ public class collision : MonoBehaviour {
 		speed.x=horizontal_movement;
 		speed.z=vertical_movement;
 
-		if(canInteract && Input.GetKeyDown(KeyCode.Space)){
+		if(canInteract && Input.GetKeyUp(KeyCode.Space)){
 			Debug.Log("I INTERACTED");
 		}
 
