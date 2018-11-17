@@ -10,6 +10,7 @@ public class Day : MonoBehaviour {
     public bool interactionSpam;
     public bool inversedInput;
     public bool muffledSound;
+    public bool speedyDay;
     public AudioClip audioclip;
     public string plantHint;
     public string plantFail;

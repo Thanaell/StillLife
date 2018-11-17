@@ -19,6 +19,7 @@ public class Move : MonoBehaviour
 
     bool inversedInput;
     bool interactionSpam;
+    bool speedyDay;
 
     int spaceHits;
     bool hasRightToInteract;
@@ -64,6 +65,9 @@ public class Move : MonoBehaviour
 
             inversedInput=DayManager.Instance.currentDay.inversedInput;
             interactionSpam=DayManager.Instance.currentDay.interactionSpam;
+            speedyDay=DayManager.Instance.currentDay.speedyDay;
+
+            if(speedyDay){moveSpeed=4f;}
 
             if(inversedInput){
                 rb.MovePosition(transform.position - rightMovement - upMovement);

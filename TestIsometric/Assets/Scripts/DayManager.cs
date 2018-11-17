@@ -16,6 +16,7 @@ public class DayManager : Singleton<DayManager> {
     public float fieldOfView;
     public float nightTime = 4f;
     public bool interactionSpam;
+    public bool speedyDay;
 
     public Canvas nightCanvas;
 
@@ -50,8 +51,9 @@ public class DayManager : Singleton<DayManager> {
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
-        if(dayIndex>=4){ currentDay.inversedInput=true;} //Changement de contrôles au jour 5
-        if(dayIndex==3){ currentDay.interactionSpam=true;}
+        if(dayIndex==4){ currentDay.inversedInput=true;} //Changement de contrôles au jour 5
+        if(dayIndex==3){ currentDay.interactionSpam=true;} //spam la barre d'espace pour interagir au jour 3
+        if(dayIndex==2){ currentDay.speedyDay=true;}//le perso a l'air d'aller plus vite aujourd'hui… (joueur 2)
         PlantManager.Instance.ChooseSprite();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
