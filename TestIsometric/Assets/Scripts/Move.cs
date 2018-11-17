@@ -33,7 +33,6 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     void LateUpdate()
@@ -49,32 +48,30 @@ public class Move : MonoBehaviour
 
             Rigidbody rb = GetComponent<Rigidbody>();
 
-            //transform.forward = heading;
             rb.MovePosition(transform.position + rightMovement + upMovement);
-            
-
-            if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
-            {
-                Debug.Log("I INTERACTED");
-                interactiveObject.Interact();    
-            }
 
             if(upMovement!=Vector3.zero){
-			if(rightMovement!=Vector3.zero){
-				spriteR.sprite=sprites[1];
-			}
-			else{
-				//spriteR.sprite=sprites[0];
-				anim.SetTrigger("moveFront");
-			}
-		}
-		else if(rightMovement!=Vector3.zero){
-			spriteR.sprite=sprites[2];
-		}
-        }        
+			    if(rightMovement!=Vector3.zero){
+				    spriteR.sprite=sprites[1];
+			    }
+			    else{
+				    //spriteR.sprite=sprites[0];
+				    anim.SetTrigger("moveFront");
+			    }
+		    }
+		    else if(rightMovement!=Vector3.zero){
+			    spriteR.sprite=sprites[2];
+		    }
+        }
+
+        if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
+        {
+            Debug.Log("I INTERACTED");
+            interactiveObject.Interact();
+        }
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Interactable")
         {
@@ -86,7 +83,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision col)
+    void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "Interactable")
         {
