@@ -41,6 +41,11 @@ public class DayManager : Singleton<DayManager> {
         noiseLevel = currentDay.noiseLevel;
         fieldOfView = currentDay.fieldOfView;
         Camera.main.GetComponent<PostProcessingBehaviour>().profile = currentDay.postProcessingProfile;
+
+        foreach(DailyTask dailyTask in dailyTasks)
+        {
+            dailyTask.complete = false;
+        }
     }
 
     public void IncrementTask()
