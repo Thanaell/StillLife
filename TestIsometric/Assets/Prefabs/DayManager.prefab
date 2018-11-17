@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1828310535590592}
+  m_IsPrefabAsset: 1
+--- !u!1 &1828310535590592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4560106760622612}
+  - component: {fileID: 114820745459054732}
+  - component: {fileID: 114708021120374474}
+  - component: {fileID: 114606614603161234}
+  m_Layer: 0
+  m_Name: DayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4560106760622612
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114606614603161234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  dailyTaskType: 1
+  animationTime: 2.5
+  hintAudio: {fileID: 8300000, guid: 603c59fb0fb72c04ca70501e6513af40, type: 3}
+  progressAudio: {fileID: 8300000, guid: 4a522e9d55ba56b4bb1b01bb6c4c3461, type: 3}
+  hintText: Arroser la plante ?
+  succesText: "Plante arros\xE9e"
+--- !u!114 &114708021120374474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  dailyTaskType: 0
+  animationTime: 2.5
+  hintAudio: {fileID: 0}
+  progressAudio: {fileID: 0}
+  hintText: 
+  succesText: 
+--- !u!114 &114820745459054732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb24b1c96c475e40b52f2e7756d1c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  days:
+  - {fileID: 0}
+  - {fileID: 0}
+  dailyTasks:
+  - {fileID: 114606614603161234}
+  numberOfTasksCompleted: 0
+  currentDay: {fileID: 0}
+  inputDelay: 0
+  blurringLevel: 0
+  inversedInput: 0
+  noiseLevel: 0
+  fieldOfView: 0

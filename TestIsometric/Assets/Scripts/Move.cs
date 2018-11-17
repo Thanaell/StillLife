@@ -85,12 +85,13 @@ public class Move : MonoBehaviour
                 //anim.SetBool("isMovingSide",false);
                 //anim.SetBool("isMovingDiagonal",false);
             //}
+        }
+
 
         if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
             Debug.Log("I INTERACTED");
             interactiveObject.Interact();
-        }
         }
     }
 
@@ -102,6 +103,7 @@ public class Move : MonoBehaviour
             if (col.gameObject.GetComponent<InteractiveObject>())
             {
                 interactiveObject = col.gameObject.GetComponent<InteractiveObject>();
+                interactiveObject.Trigger();
             }
         }
     }
@@ -111,6 +113,7 @@ public class Move : MonoBehaviour
         if (col.gameObject.tag == "Interactable")
         {
             canInteract = false;
+            FloatingTextManager.Instance.HideText();
         }
     }
 }
