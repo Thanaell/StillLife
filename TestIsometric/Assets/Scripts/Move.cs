@@ -17,6 +17,8 @@ public class Move : MonoBehaviour
 
     private InteractiveObject interactiveObject = null;
 
+    bool inversedInput;
+
     // Use this for initialization
     void Start()
     {
@@ -50,32 +52,44 @@ public class Move : MonoBehaviour
             Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
             Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 
+
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
             Rigidbody rb = GetComponent<Rigidbody>();
 
-            rb.MovePosition(transform.position + rightMovement + upMovement);
+            inversedInput=DayManager.Instance.currentDay.inversedInput;
+
+            if(inversedInput){
+                rb.MovePosition(transform.position - rightMovement - upMovement);
+            }
+            else{
+                rb.MovePosition(transform.position + rightMovement + upMovement);
+            }
+
+
+            //Goodbye pretty code
 
             if(upMovement!=Vector3.zero){
 			    if(rightMovement.x>0){
 				    //spriteR.sprite=sprites[1];
-                    anim.SetBool("isMovingRight",true);
+                    if(!inversedInput){ anim.SetBool("isMovingRight",true); }
+                    else{ anim.SetBool("isMovingLeft",true);}                    
 			    }
 			    else if (rightMovement.x<0){
-                    anim.SetBool("isMovingLeft",true);
+                    if(!inversedInput){ anim.SetBool("isMovingLeft",true); } else { anim.SetBool("isMovingRight",true);}
                 }
                 else if (upMovement.z>0){
-				    anim.SetBool("isMovingUp",true);
+				    if(!inversedInput){ anim.SetBool("isMovingUp",true);} else { anim.SetBool("isMovingRight", true);}
 			    }
                 else if (upMovement.z<0){
-                    anim.SetBool("isMovingRight",true);
+                    if(!inversedInput){ anim.SetBool("isMovingRight",true);} else { anim.SetBool("isMovingUp", true);}
                 }
 		    }
 		    else if(rightMovement.x>0){
-                anim.SetBool("isMovingRight", true);
+                if(!inversedInput){ anim.SetBool("isMovingRight", true);} else { anim.SetBool("isMovingLeft", true);}
 		    }
             else if(rightMovement.x<0){
-                anim.SetBool("isMovingLeft", true);
+                if(!inversedInput){ anim.SetBool("isMovingLeft", true);} else { anim.SetBool("isMovingRight", true);}
             }
         }
 

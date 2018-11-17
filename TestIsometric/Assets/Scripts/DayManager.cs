@@ -49,6 +49,7 @@ public class DayManager : Singleton<DayManager> {
         dayIndex++;
         numberOfTasksCompleted = 0;
         currentDay = days[dayIndex];
+        if(dayIndex==4){ currentDay.inversedInput=true;}
         PlantManager.Instance.ChooseSprite();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
