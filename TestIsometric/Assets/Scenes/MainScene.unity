@@ -705,41 +705,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: radioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: journalClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: pillsClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: audioclip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: radioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: journalClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
-        type: 2}
-      propertyPath: pillsClip
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0
@@ -1537,17 +1502,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1208056313}
-    - target: {fileID: 20200462721990322, guid: 110e304f32e8a7f4d8767a5a45e9b18d,
-        type: 2}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114264949091904358, guid: 110e304f32e8a7f4d8767a5a45e9b18d,
-        type: 2}
-      propertyPath: profile
-      value: 
-      objectReference: {fileID: 11400000, guid: 04ae5c90ac578f544b5fbe830aa02514,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 110e304f32e8a7f4d8767a5a45e9b18d, type: 2}
   m_IsPrefabAsset: 0
@@ -2221,38 +2175,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 102904940021418652, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5,
-        type: 3}
-    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5,
-        type: 3}
-    - target: {fileID: 23866982193124754, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
-    - target: {fileID: 23707836903763392, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
-    - target: {fileID: 102904940021418652, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_FontSize
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
-        type: 2}
-      propertyPath: m_FontSize
-      value: 32
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
   m_IsPrefabAsset: 0
@@ -2478,11 +2400,6 @@ Prefab:
     - target: {fileID: 4694960854290666, guid: 44cbc914ffe122e43a687dda994811dd, type: 2}
       propertyPath: m_RootOrder
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 82161227357939652, guid: 44cbc914ffe122e43a687dda994811dd,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cbc914ffe122e43a687dda994811dd, type: 2}
