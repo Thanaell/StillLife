@@ -41,10 +41,12 @@ public class DayManager : Singleton<DayManager> {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+        StartCoroutine(ScreenFadeOut(nightTime));
+    }
+
+    // Update is called once per frame
+    void Update () {
     }
 
     public IEnumerator NextDay()
@@ -54,31 +56,33 @@ public class DayManager : Singleton<DayManager> {
         {
             SceneManager.LoadScene(0);
         }
+        bool newsRead = true;
         foreach (DailyTask dailyTask in dailyTasks)
         {
             if(!dailyTask.complete)
             {
-                switch(dailyTask.dailyTaskType)
+                if(dailyTask.dailyTaskType == DailyTaskType.TurnOnRadioTask || dailyTask.dailyTaskType == DailyTaskType.Journal)
+                {
+                    newsRead = false;
+                }
+                switch (dailyTask.dailyTaskType)
                 {
                     case DailyTaskType.WarteringPlantTask:
                         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.plantFail, 2f));
-                        yield return new WaitForSecondsRealtime(2.1f);
-                        break;
-                    case DailyTaskType.TurnOnRadioTask:
-                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.radioFail, 2f));
                         yield return new WaitForSecondsRealtime(2.1f);
                         break;
                     case DailyTaskType.Pills:
                         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.pillsFail, 2f));
                         yield return new WaitForSecondsRealtime(2.1f);
                         break;
-                    case DailyTaskType.Journal:
-                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.journalFail, 2f));
-                        yield return new WaitForSecondsRealtime(2.1f);
-                        break;
                     default: break;
                 }
             }
+        }
+        if(!newsRead)
+        {
+            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.radioFail, 2f));
+            yield return new WaitForSecondsRealtime(2.1f);
         }
         StartCoroutine(ScreenFadeIn(nightTime / 2));
         yield return new WaitForSecondsRealtime(nightTime/2);

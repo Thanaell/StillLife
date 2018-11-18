@@ -145,16 +145,31 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator ChoosePill()
     {
-        string[] sentences = DayManager.Instance.currentDay.pillsHint.Split('.');
+        bool pillsTaken = false;
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
-        complete = true;
         DayManager.Instance.pillCanvas.SetActive(true);
-        foreach (string s in sentences)
+        string succesText = "";
+        while(!pillsTaken)
         {
-            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
-            yield return new WaitForSecondsRealtime(5.1f);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                complete = true;
+                DayManager.Instance.pillCanvas.SetActive(false);
+                pillsTaken = true;
+                succesText = "Bravo, tu sais toujours lire les couleurs...";
+            }
+            else if (Input.anyKeyDown)
+            {
+                Debug.Log("t'es nul ou quoi ?");
+                pillsTaken = true;
+                DayManager.Instance.pillCanvas.SetActive(false);
+                succesText = "Raté ! Je suis immortel de toute façon";
+            }
+            yield return null;
         }
+        yield return new WaitForSecondsRealtime(0.2f);
+        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(succesText));
         DayManager.Instance.IncrementTask();
     }
 }

@@ -1013,7 +1013,7 @@ MonoBehaviour:
   progressAudio: {fileID: 0}
   hintAudioMuffled: {fileID: 0}
   progressAudioMuffled: {fileID: 0}
-  hintText: 
+  hintText: Ramasser le journal
   succesText: 
 --- !u!114 &643899372
 MonoBehaviour:
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   progressAudio: {fileID: 0}
   hintAudioMuffled: {fileID: 0}
   progressAudioMuffled: {fileID: 0}
-  hintText: 
+  hintText: Choisir sa pilule
   succesText: 
 --- !u!1 &789218462
 GameObject:
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

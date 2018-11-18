@@ -39,7 +39,6 @@ public class Move : MonoBehaviour
         anim.SetBool("isMovingUp",false);
         anim.SetBool("isMovingLeft",false);
         spaceHits=0;
-
     }
 
     // Update is called once per frame
