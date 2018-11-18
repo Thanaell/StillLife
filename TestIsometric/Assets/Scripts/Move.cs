@@ -62,6 +62,7 @@ public class Move : MonoBehaviour
             Vector3 heading = Vector3.Normalize(rightMovement + upMovement);
 
             Rigidbody rb = GetComponent<Rigidbody>();
+            anim.SetBool("isMoving",false);
 
             inversedInput=DayManager.Instance.currentDay.inversedInput;
             interactionSpam=DayManager.Instance.currentDay.interactionSpam;
@@ -81,6 +82,7 @@ public class Move : MonoBehaviour
             //Goodbye pretty code
 
             if(upMovement!=Vector3.zero){
+                anim.SetBool("isMoving",true);
 			    if(rightMovement.x>0){
 				    //spriteR.sprite=sprites[1];
                     if(!inversedInput){ anim.SetBool("isMovingRight",true); }
@@ -97,11 +99,14 @@ public class Move : MonoBehaviour
                 }
 		    }
 		    else if(rightMovement.x>0){
+                anim.SetBool("isMoving",true);
                 if(!inversedInput){ anim.SetBool("isMovingRight", true);} else { anim.SetBool("isMovingLeft", true);}
 		    }
             else if(rightMovement.x<0){
+                anim.SetBool("isMoving",true);
                 if(!inversedInput){ anim.SetBool("isMovingLeft", true);} else { anim.SetBool("isMovingRight", true);}
             }
+            else{ anim.SetBool("isMoving",false);}
         }
 
         if(Input.GetKeyUp(KeyCode.Space)){
