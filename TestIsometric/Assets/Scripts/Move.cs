@@ -67,7 +67,8 @@ public class Move : MonoBehaviour
             interactionSpam=DayManager.Instance.currentDay.interactionSpam;
             speedyDay=DayManager.Instance.currentDay.speedyDay;
 
-            if(speedyDay){moveSpeed=4f;} else(moveSpeed=2f;)
+            if (speedyDay) { moveSpeed = 4f; }
+            else { moveSpeed = 2f; }
 
             if(inversedInput){
                 rb.MovePosition(transform.position - rightMovement - upMovement);
