@@ -705,6 +705,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: journalClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426491732284088, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: audioclip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: journalClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672448729989596, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0
@@ -795,8 +830,18 @@ Prefab:
     - target: {fileID: 82723998763089552, guid: b2fb37a806d4f7d44aedafd38209ba15,
         type: 2}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 114606614603161234, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: progressAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 28c46d74a7829b14f85e1e63f5725f34, type: 3}
+    - target: {fileID: 114606614603161234, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: progressAudioMuffled
+      value: 
+      objectReference: {fileID: 8300000, guid: cd4abc6ce35530045ac13e1871130bdb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
   m_IsPrefabAsset: 0
@@ -2431,7 +2476,7 @@ Prefab:
     - target: {fileID: 82161227357939652, guid: 44cbc914ffe122e43a687dda994811dd,
         type: 2}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cbc914ffe122e43a687dda994811dd, type: 2}
