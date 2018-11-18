@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class JournalManager : Singleton<JournalManager>
 {
-    string spriteNames = "plante-01";
+    string spriteNames = "journal-01-fix";
     Sprite[] sprites;
     public Image journalImage;
     // Use this for initialization

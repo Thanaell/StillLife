@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 8a15ae658dd83724384121f24ba84fcf
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Salle_de_bain__Pillule-01_0
+    21300002: Salle_de_bain__Pillule-01_1
+    21300004: Salle_de_bain__Pillule-01_2
+    21300006: Salle_de_bain__Pillule-01_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -115,11 +119,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Salle_de_bain__Pillule-01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2262
+        width: 1922
+        height: 754
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31f1dc0c84c52f448a69fd0a37db307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salle_de_bain__Pillule-01_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1508
+        width: 1922
+        height: 754
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002a2cfc9f8b34a4fa18efdf59c95f24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salle_de_bain__Pillule-01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 759
+        width: 1922
+        height: 754
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107ecb74d9a88fd4eb03a3368715898e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salle_de_bain__Pillule-01_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 1922
+        height: 754
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b867e0cec2e6cc14b811a390a487e1f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d30f666fe93984a488d45cd3c5dae75e
     vertices: []
     indices: 
     edges: []

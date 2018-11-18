@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class PillsManager : Singleton<PillsManager>
 {
-    string spriteNames = "plante-01";
+    string spriteNames = "pills-1";
     Sprite[] sprites;
     public Image pillsImage;
     // Use this for initialization
     void Start()
     {
         sprites = Resources.LoadAll<Sprite>(spriteNames);
-        pillsImage.sprite = sprites[0];
+        pillsImage.sprite = sprites[3];
     }
 
     public void ChooseSprite()
@@ -21,21 +21,22 @@ public class PillsManager : Singleton<PillsManager>
         switch (DayManager.Instance.currentDay.dayNumber)
         {
             case 1:
-                pillsImage.sprite = sprites[0];
-                break;
-            case 2:
-                pillsImage.sprite = sprites[1];
-                break;
-            case 3:
-                pillsImage.sprite = sprites[2];
-                break;
-            case 4:
                 pillsImage.sprite = sprites[3];
                 break;
+            case 2:
+                pillsImage.sprite = sprites[2];
+                break;
+            case 3:
+                pillsImage.sprite = sprites[1];
+                break;
+            case 4:
+                pillsImage.sprite = sprites[0];
+                break;
             case 5:
-                pillsImage.sprite = sprites[4];
+                pillsImage.sprite = sprites[0];
                 break;
             case 6:
+                pillsImage.sprite = sprites[0];
                 break;
         }
     }
