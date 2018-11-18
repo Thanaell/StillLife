@@ -280,9 +280,9 @@ MonoBehaviour:
   pillsFail: 
   journalHint: 
   journalFail: 
-  radioClip: {fileID: 8300000, guid: 3783544283c4ada4eabff44155f5e06b, type: 3}
-  journalClip: {fileID: 8300000, guid: f6f5eaa87d9197846937497c2f3c2b29, type: 3}
-  pillsClip: {fileID: 8300000, guid: 16efa1a859a3e3844b30bc708cc00fbd, type: 3}
+  radioClip: {fileID: 0}
+  journalClip: {fileID: 0}
+  pillsClip: {fileID: 0}
 --- !u!114 &114489937338939306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,7 +334,7 @@ MonoBehaviour:
   inversedInput: 0
   muffledSound: 1
   speedyDay: 0
-  audioclip: {fileID: 8300000, guid: 7e2a2ebb23dec364d81dc5860bf28e1d, type: 3}
+  audioclip: {fileID: 0}
   plantHint: 
   plantFail: 
   radioHint: 
@@ -343,9 +343,9 @@ MonoBehaviour:
   pillsFail: 
   journalHint: 
   journalFail: 
-  radioClip: {fileID: 8300000, guid: 3783544283c4ada4eabff44155f5e06b, type: 3}
-  journalClip: {fileID: 8300000, guid: f6f5eaa87d9197846937497c2f3c2b29, type: 3}
-  pillsClip: {fileID: 8300000, guid: 16efa1a859a3e3844b30bc708cc00fbd, type: 3}
+  radioClip: {fileID: 0}
+  journalClip: {fileID: 0}
+  pillsClip: {fileID: 0}
 --- !u!114 &114757879802397356
 MonoBehaviour:
   m_ObjectHideFlags: 1

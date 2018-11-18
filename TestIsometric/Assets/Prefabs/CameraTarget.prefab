@@ -80,7 +80,7 @@ Camera:
   m_GameObject: {fileID: 1794805217177614}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.17888926, g: 0.18269646, b: 0.18867922, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
+  profile: {fileID: 11400000, guid: 04ae5c90ac578f544b5fbe830aa02514, type: 2}
 --- !u!114 &114530351202202078
 MonoBehaviour:
   m_ObjectHideFlags: 1

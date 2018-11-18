@@ -48,7 +48,7 @@ MonoBehaviour:
       downsampling: 1
       forceForwardCompatibility: 0
       ambientOnly: 0
-      highPrecision: 0
+      highPrecision: 1
   screenSpaceReflection:
     m_Enabled: 0
     m_Settings:
@@ -71,11 +71,11 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 10
-      aperture: 5.6
-      focalLength: 50
+      focusDistance: 20
+      aperture: 17.5
+      focalLength: 59
       useCameraFov: 0
-      kernelSize: 1
+      kernelSize: 3
   motionBlur:
     m_Enabled: 0
     m_Settings:
@@ -85,7 +85,7 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 45
+      lowPercent: 40.21465
       highPercent: 95
       minLuminance: -5
       maxLuminance: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
         intensity: 0.5
         threshold: 1.1
         softKnee: 0.5
-        radius: 4
+        radius: 3.73
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -124,8 +124,8 @@ MonoBehaviour:
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 0.5
-        contrast: 0.3
+        saturation: 0.6
+        contrast: 0.5
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
@@ -305,10 +305,10 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.1
+      intensity: 0.317
   grain:
     m_Enabled: 0
     m_Settings:
@@ -320,13 +320,13 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 1, g: 1, b: 1, a: 1}
       center: {x: 0.5, y: 0.5}
       intensity: 0.45
-      smoothness: 0.2
+      smoothness: 1
       roundness: 1
       mask: {fileID: 0}
-      opacity: 1
+      opacity: 0.44
       rounded: 0
   dithering:
     m_Enabled: 0
