@@ -8,6 +8,7 @@ public class Move : MonoBehaviour
     float moveSpeed = 2f;
     bool canMove = true;
     bool canInteract = false;
+    bool discoveredSpam = false;
 
     Vector3 forward, right, lastPosition;
 
@@ -63,7 +64,7 @@ public class Move : MonoBehaviour
 
             Rigidbody rb = GetComponent<Rigidbody>();
             anim.SetBool("isMoving",false);
-
+                
             inversedInput=DayManager.Instance.currentDay.inversedInput;
             interactionSpam=DayManager.Instance.currentDay.interactionSpam;
             speedyDay=DayManager.Instance.currentDay.speedyDay;
@@ -109,13 +110,25 @@ public class Move : MonoBehaviour
             else{ anim.SetBool("isMoving",false);}
         }
 
-        Debug.Log(canInteract);
-        Debug.Log(spaceHits);
         if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
             if(interactionSpam)
             {
                 spaceHits++;
+                if (!discoveredSpam)
+                {
+                    if(spaceHits == 1)
+                    {
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText("Tu te fais faible.", 2f));
+                    }
+                    if (spaceHits == 2)
+                    {
+                        StopCoroutine(FloatingTextManager.Instance.DisplayHideText("Tu te fais faible.", 2f));
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText("Insiste encore un peu.", 2f));
+                        discoveredSpam = true;
+                    }
+                }
+
             }
 
             foreach (DailyTask dailyTask in DayManager.Instance.dailyTasks)

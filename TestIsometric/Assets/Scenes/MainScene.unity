@@ -2086,6 +2086,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62a95d07fb830fa47941d46b4e98af82, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1874541883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1782651225821016, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930153327}
+--- !u!114 &1874541889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874541883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee01787749c09f488fa372c7f342f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelSize: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  resolutionDependant: 0
+  doubleResolution: 1024
 --- !u!1001 &1930153327
 Prefab:
   m_ObjectHideFlags: 0
@@ -2129,6 +2149,16 @@ Prefab:
         type: 2}
       propertyPath: m_Anchor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102904940021418652, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Color.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Color.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
@@ -2544,3 +2574,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2068678026}
   m_CullTransparentMesh: 0
+--- !u!1 &2070842889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1487594033732536, guid: aece2c6ba719a714fa42072496941e4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930153327}
+--- !u!114 &2070842894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070842889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee01787749c09f488fa372c7f342f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelSize: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  resolutionDependant: 0
+  doubleResolution: 1024

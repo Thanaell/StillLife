@@ -12,7 +12,7 @@ public class GameManager: Singleton<GameManager> {
     {
       if (creditsImage.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
             {
                 creditsImage.SetActive(false);
             }
