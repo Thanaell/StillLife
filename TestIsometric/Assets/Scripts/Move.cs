@@ -108,7 +108,7 @@ public class Move : MonoBehaviour
             spaceHits++;
         }
         canInteract=(!interactionSpam)||(interactionSpam&&spaceHits>5);
-        if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject && canInteract)
+        if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
             Debug.Log("I INTERACTED");
             interactiveObject.Interact();

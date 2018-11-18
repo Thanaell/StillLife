@@ -70,6 +70,10 @@ public class DayManager : Singleton<DayManager> {
                         StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.pillsFail, 2f));
                         yield return new WaitForSecondsRealtime(2.1f);
                         break;
+                    case DailyTaskType.Journal:
+                        StartCoroutine(FloatingTextManager.Instance.DisplayHideText(currentDay.journalFail, 2f));
+                        yield return new WaitForSecondsRealtime(2.1f);
+                        break;
                     default: break;
                 }
             }

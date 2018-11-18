@@ -78,7 +78,6 @@ public class DailyTask : MonoBehaviour {
         {
             case DailyTaskType.TurnOnRadioTask:
                 break;
-
             case DailyTaskType.WarteringPlantTask:
                 StartCoroutine(FloatingTextManager.Instance.DisplayHideText(DayManager.Instance.currentDay.plantHint));
                 break;
@@ -143,6 +142,7 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator ChoosePill()
     {
+        Debug.Log("hello");
         string[] sentences = DayManager.Instance.currentDay.pillsHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
