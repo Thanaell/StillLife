@@ -1780,8 +1780,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "GRAPHIC\nDoriane Claireaux\n\nLEVEL DESIGN\nMaxime Mignot\n\nSTORY DESIGN\nLucas
-    Parraud\n\n\nSOUND\nF\xE9lix Belthoise\n\n"
+  m_Text: "GRAPHISME\nDoriane Claireaux\n\nLEVEL DESIGN\nMaxime Mignot\n\nNARRATION\nLucas
+    Parraud\n\n\nSON\nF\xE9lix Belthoise\n\n"
 --- !u!222 &1352709915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1856,7 +1856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "PROGRAMMING\nGa\xEBlle Clavelin\nDelphine CORDAT\nRova Randrianantoanina"
+  m_Text: "PROGRAMMATION\nGa\xEBlle Clavelin\nDelphine CORDAT\nRova Randrianantoanina"
 --- !u!222 &1463067340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2192,6 +2192,16 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
+    - target: {fileID: 102904940021418652, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_FontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_FontSize
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
   m_IsPrefabAsset: 0

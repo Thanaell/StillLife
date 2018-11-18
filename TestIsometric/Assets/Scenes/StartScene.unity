@@ -441,8 +441,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "PROGRAMMING\nGa\xEBlle Clavelin\nDelphine Cordat\nRova Randrianantoanina\n\nSOUND
-    DESIGN\nF\xE9lix Belthoise"
+  m_Text: "PROGRAMMATION\nGa\xEBlle Clavelin\nDelphine Cordat\nRova Randrianantoanina\n\nSON\nF\xE9lix
+    Belthoise"
 --- !u!222 &361540833
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Jouer
 --- !u!222 &1507224880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1529,7 +1529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: "Cr\xE9dits"
 --- !u!222 &2072725924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1604,7 +1604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: 'GRAPHIC DESIGN
+  m_Text: 'GRAPHISME
 
     Doriane Claireaux
 
@@ -1614,7 +1614,7 @@ MonoBehaviour:
     Maxime Mignot
 
 
-    NARRATIVE DESIGN
+    NARRATION
 
     Lucas Parraud
 
