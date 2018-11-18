@@ -438,7 +438,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -172}
+  m_AnchoredPosition: {x: -0.000002861, y: -214}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66005862
@@ -1645,13 +1645,14 @@ GameObject:
   - component: {fileID: 963160423}
   - component: {fileID: 963160422}
   - component: {fileID: 963160426}
+  - component: {fileID: 963160427}
   m_Layer: 5
   m_Name: PillCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &963160422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,6 +1740,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 791ae48ada8d6a847938d559256de38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &963160427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963160421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d54595136b134c80774c2f965e529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &993605334 stripped
