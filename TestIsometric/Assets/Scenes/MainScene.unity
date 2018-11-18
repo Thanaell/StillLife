@@ -168,7 +168,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: "Prends la pilule bleue\nA\t\t\t\t\tZ\t\t\t\t\tE\t\t\t\tR"
 --- !u!222 &66005863
 CanvasRenderer:
@@ -646,7 +646,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: Quitter le jeu
 --- !u!222 &455708974
 CanvasRenderer:
@@ -708,281 +708,98 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &643899364
-GameObject:
+--- !u!1001 &739615997
+Prefab:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1828310535590592, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 643899370}
-  - component: {fileID: 643899369}
-  - component: {fileID: 643899368}
-  - component: {fileID: 643899367}
-  - component: {fileID: 643899366}
-  - component: {fileID: 643899372}
-  - component: {fileID: 643899371}
-  - component: {fileID: 643899365}
-  m_Layer: 0
-  m_Name: DayManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &643899365
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 82723998763089552, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &643899366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114800085531654520, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complete: 0
-  dailyTaskType: 0
-  animationTime: 2.5
-  hintAudio: {fileID: 0}
-  progressAudio: {fileID: 8300000, guid: 3f7b2fff4c7394f42bb26a8bbc5ccd2c, type: 3}
-  hintAudioMuffled: {fileID: 0}
-  progressAudioMuffled: {fileID: 8300000, guid: 0b10a1fd43e39f743a65add40762ccb5,
-    type: 3}
-  hintText: Allumer radio ?
-  succesText: 
---- !u!114 &643899367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114606614603161234, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complete: 0
-  dailyTaskType: 1
-  animationTime: 2.5
-  hintAudio: {fileID: 8300000, guid: 603c59fb0fb72c04ca70501e6513af40, type: 3}
-  progressAudio: {fileID: 8300000, guid: 4a522e9d55ba56b4bb1b01bb6c4c3461, type: 3}
-  hintAudioMuffled: {fileID: 8300000, guid: 437bf9eee6f8bc94787a4e3b51636488, type: 3}
-  progressAudioMuffled: {fileID: 8300000, guid: 8af0aa701c22a4a458b6f793bf455a07,
-    type: 3}
-  hintText: Arroser la plante ?
-  succesText: "Plante arros\xE9e"
---- !u!114 &643899368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114708021120374474, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complete: 0
-  dailyTaskType: 3
-  animationTime: 2.5
-  hintAudio: {fileID: 0}
-  progressAudio: {fileID: 0}
-  hintAudioMuffled: {fileID: 0}
-  progressAudioMuffled: {fileID: 0}
-  hintText: Dormir ?
-  succesText: 
---- !u!114 &643899369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb24b1c96c475e40b52f2e7756d1c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  days:
-  - {fileID: 1681330908}
-  - {fileID: 2023310178}
-  - {fileID: 1022744020}
-  - {fileID: 123186691}
-  - {fileID: 1010233878}
-  - {fileID: 993605334}
-  dailyTasks:
-  - {fileID: 643899367}
-  - {fileID: 643899368}
-  - {fileID: 643899366}
-  - {fileID: 643899372}
-  - {fileID: 643899371}
-  numberOfTasksCompleted: 0
-  currentDay: {fileID: 0}
-  inputDelay: 0
-  inversedInput: 0
-  muffledSound: 0
-  fieldOfView: 0
-  nightTime: 4
-  interactionSpam: 0
-  speedyDay: 0
-  nightCanvas: {fileID: 996786306}
-  journalCanvas: {fileID: 2043669495}
-  pillCanvas: {fileID: 963160421}
---- !u!4 &643899370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &643899371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complete: 0
-  dailyTaskType: 4
-  animationTime: 2.5
-  hintAudio: {fileID: 0}
-  progressAudio: {fileID: 0}
-  hintAudioMuffled: {fileID: 0}
-  progressAudioMuffled: {fileID: 0}
-  hintText: Ramasser le journal
-  succesText: 
---- !u!114 &643899372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 643899364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  complete: 0
-  dailyTaskType: 2
-  animationTime: 2.5
-  hintAudio: {fileID: 0}
-  progressAudio: {fileID: 0}
-  hintAudioMuffled: {fileID: 0}
-  progressAudioMuffled: {fileID: 0}
-  hintText: Choisir sa pilule
-  succesText: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560106760622612, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[0]
+      value: 
+      objectReference: {fileID: 1681330908}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[1]
+      value: 
+      objectReference: {fileID: 2023310178}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[2]
+      value: 
+      objectReference: {fileID: 1022744020}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[3]
+      value: 
+      objectReference: {fileID: 123186691}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[4]
+      value: 
+      objectReference: {fileID: 1010233878}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: days.Array.data[5]
+      value: 
+      objectReference: {fileID: 993605334}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: nightCanvas
+      value: 
+      objectReference: {fileID: 996786306}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: journalCanvas
+      value: 
+      objectReference: {fileID: 2043669495}
+    - target: {fileID: 114820745459054732, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: pillCanvas
+      value: 
+      objectReference: {fileID: 963160421}
+    - target: {fileID: 82723998763089552, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &789218462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,16 +1128,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114514910153406200, guid: 0ba05ac8c6d92704bb7d59ff1593695e,
-        type: 2}
-      propertyPath: journalImage
-      value: 
-      objectReference: {fileID: 407239146}
     - target: {fileID: 114500880907198452, guid: 0ba05ac8c6d92704bb7d59ff1593695e,
         type: 2}
       propertyPath: pillsImage
       value: 
       objectReference: {fileID: 789218464}
+    - target: {fileID: 114514910153406200, guid: 0ba05ac8c6d92704bb7d59ff1593695e,
+        type: 2}
+      propertyPath: journalImage
+      value: 
+      objectReference: {fileID: 407239146}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba05ac8c6d92704bb7d59ff1593695e, type: 2}
   m_IsPrefabAsset: 0
@@ -1951,7 +1768,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 443c83e2b0807fe4c8780e2ed3295f80, type: 3}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -1962,7 +1779,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: "GRAPHIC\nDoriane Claireaux\n\nLEVEL DESIGN\nMaxime Mignot\n\nSTORY DESIGN\nLucas
     Parraud\n\n\nSOUND\nF\xE9lix Belthoise\n\n"
 --- !u!222 &1352709915
@@ -2027,7 +1844,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 443c83e2b0807fe4c8780e2ed3295f80, type: 3}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -2038,7 +1855,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: "PROGRAMMING\nGa\xEBlle Clavelin\nDelphine CORDAT\nRova Randrianantoanina"
 --- !u!222 &1463067340
 CanvasRenderer:
@@ -2102,7 +1919,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2113,7 +1930,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: Credits
 --- !u!222 &1624060963
 CanvasRenderer:
@@ -2252,7 +2069,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2263,7 +2080,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.8
   m_Text: Retour au menu
 --- !u!222 &1830334320
 CanvasRenderer:
@@ -2353,6 +2170,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 102904940021418652, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5,
+        type: 3}
+    - target: {fileID: 102786955622560390, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d5477c6a192861f468164221f6c3cea5,
+        type: 3}
+    - target: {fileID: 23866982193124754, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
+    - target: {fileID: 23707836903763392, guid: aece2c6ba719a714fa42072496941e4c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5477c6a192861f468164221f6c3cea5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aece2c6ba719a714fa42072496941e4c, type: 2}
   m_IsPrefabAsset: 0
@@ -2578,6 +2417,11 @@ Prefab:
     - target: {fileID: 4694960854290666, guid: 44cbc914ffe122e43a687dda994811dd, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 82161227357939652, guid: 44cbc914ffe122e43a687dda994811dd,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44cbc914ffe122e43a687dda994811dd, type: 2}

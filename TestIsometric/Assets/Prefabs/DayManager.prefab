@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114708021120374474}
   - component: {fileID: 114606614603161234}
   - component: {fileID: 114800085531654520}
+  - component: {fileID: 114224682156088904}
+  - component: {fileID: 114122609795700932}
   - component: {fileID: 82723998763089552}
   m_Layer: 0
   m_Name: DayManager
@@ -139,6 +141,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114122609795700932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  dailyTaskType: 4
+  animationTime: 2.5
+  hintAudio: {fileID: 0}
+  progressAudio: {fileID: 0}
+  hintAudioMuffled: {fileID: 0}
+  progressAudioMuffled: {fileID: 0}
+  hintText: Ramasser le journal
+  succesText: 
+--- !u!114 &114224682156088904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828310535590592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2883a3131521614880e95db2311ffe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: 0
+  dailyTaskType: 2
+  animationTime: 2.5
+  hintAudio: {fileID: 0}
+  progressAudio: {fileID: 0}
+  hintAudioMuffled: {fileID: 0}
+  progressAudioMuffled: {fileID: 0}
+  hintText: Choisir sa pilule
+  succesText: 
 --- !u!114 &114606614603161234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   complete: 0
-  dailyTaskType: 2
+  dailyTaskType: 3
   animationTime: 2.5
   hintAudio: {fileID: 0}
   progressAudio: {fileID: 0}
@@ -215,16 +257,25 @@ MonoBehaviour:
   days:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dailyTasks:
   - {fileID: 114606614603161234}
   - {fileID: 114708021120374474}
   - {fileID: 114800085531654520}
+  - {fileID: 114224682156088904}
+  - {fileID: 114122609795700932}
   numberOfTasksCompleted: 0
   currentDay: {fileID: 0}
   inputDelay: 0
-  blurringLevel: 0
   inversedInput: 0
   muffledSound: 0
   fieldOfView: 0
   nightTime: 4
+  interactionSpam: 0
+  speedyDay: 0
   nightCanvas: {fileID: 0}
+  journalCanvas: {fileID: 0}
+  pillCanvas: {fileID: 0}
