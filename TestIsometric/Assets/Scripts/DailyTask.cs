@@ -63,7 +63,7 @@ public class DailyTask : MonoBehaviour {
                 StartCoroutine(ChoosePill());
                 break;
             case DailyTaskType.Journal:
-                StartCoroutine(ReadJournal());
+                ReadJournal();
                 break;
             default:
                 DayManager.Instance.IncrementTask();
@@ -114,7 +114,7 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator TurnOnRadio()
     {
-        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
+        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('/');
         anim.SetBool("isActivatingRadio",true);
         anim.SetTrigger("activateRadio");
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.radioClip;
@@ -128,18 +128,12 @@ public class DailyTask : MonoBehaviour {
         DayManager.Instance.IncrementTask();
     }
 
-    public IEnumerator ReadJournal()
+    public void ReadJournal()
     {
-        string[] sentences = DayManager.Instance.currentDay.journalHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.journalClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         DayManager.Instance.journalCanvas.SetActive(true);
         complete = true;
-        foreach (string s in sentences)
-        {
-            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
-            yield return new WaitForSecondsRealtime(5.1f);
-        }
         DayManager.Instance.IncrementTask();
     }
 
@@ -161,7 +155,6 @@ public class DailyTask : MonoBehaviour {
             }
             else if (Input.anyKeyDown)
             {
-                Debug.Log("t'es nul ou quoi ?");
                 pillsTaken = true;
                 DayManager.Instance.pillCanvas.SetActive(false);
                 succesText = "Raté ! Je suis immortel de toute façon";

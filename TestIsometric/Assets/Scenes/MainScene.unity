@@ -705,6 +705,59 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "Elle ne poussera jamais si tu ne lui donnes pas \xE0 boire."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489937338939306, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Une femme a \xE9t\xE9 retrouv\xE9e morte chez elle./Selon la police,
+        elle serait morte de vieillesse."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantFail
+      value: "Tu as besoin d\u2019un rappel ? L\u2019eau va DANS le pot. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115265992647446, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Des similitudes d\xE9couvertes dans plusieurs meurtres.../...\xE0 travers
+        4000 ans de notre histoire."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: plantHint
+      value: "Je\u2026elle m\xE9rite mieux que \xE7a. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Avec le temps, va.../...tout s\u2019en va. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925035135147390, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioFail
+      value: Et maintenant, que vais-je faire de tout ce temps ? Que sera ma vie ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: radioHint
+      value: "Breaking News :/Notre atmosph\xE8re serait compos\xE9e \xE0 37% d\u2019entit\xE9s
+        surnaturelles. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsHint
+      value: "C\u2019est l\u2019heure de ton m\xE9dicament, Papi. .!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757879802397356, guid: 7bcdf352f0916ad41aa96edcc12ff6b8,
+        type: 2}
+      propertyPath: pillsFail
+      value: "J\u2019esp\xE8re que tu finiras en EHPAD."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcdf352f0916ad41aa96edcc12ff6b8, type: 2}
   m_IsPrefabAsset: 0
