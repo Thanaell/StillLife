@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EchapManager : MonoBehaviour {
     public GameObject menuCanvas;
+    public GameObject journalCanvas;
+    public GameObject pillsCanvas;
     public GameObject creditsImage;
 
 	// Use this for initialization
@@ -21,7 +23,7 @@ public class EchapManager : MonoBehaviour {
                 menuCanvas.SetActive(false);
                 creditsImage.SetActive(false);
             }
-            else{
+            else if(!pillsCanvas.activeSelf && !journalCanvas.activeSelf){
                 menuCanvas.SetActive(true);
                 }
         }

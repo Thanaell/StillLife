@@ -20,6 +20,8 @@ public class DayManager : Singleton<DayManager> {
     public bool speedyDay;
 
     public Canvas nightCanvas;
+    public GameObject journalCanvas;
+    public GameObject pillCanvas;
 
     protected DayManager() { }
 
