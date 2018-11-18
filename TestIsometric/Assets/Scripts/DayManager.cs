@@ -89,6 +89,9 @@ public class DayManager : Singleton<DayManager> {
         if(dayIndex==3){ currentDay.interactionSpam=true;} //spam la barre d'espace pour interagir au jour 3
         if(dayIndex==2){ currentDay.speedyDay=true;}//le perso a l'air d'aller plus vite aujourd'hui… (joueur 2)
         PlantManager.Instance.ChooseSprite();
+        JournalManager.Instance.ChooseSprite();
+        PillsManager.Instance.ChooseSprite();
+
         audioSource.clip = currentDay.audioclip;
         audioSource.Play();
         inputDelay = currentDay.inputDelay;
