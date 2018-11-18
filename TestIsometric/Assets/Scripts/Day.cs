@@ -18,4 +18,7 @@ public class Day : MonoBehaviour {
     public string radioFail;
     public string pillsHint;
     public string pillsFail;
+    public AudioClip radioClip;
+    public AudioClip journalClip;
+    public AudioClip pillsClip;
 }

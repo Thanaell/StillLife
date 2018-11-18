@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DayManager : Singleton<DayManager> {
     public Day[] days;
@@ -46,6 +47,11 @@ public class DayManager : Singleton<DayManager> {
 
     public IEnumerator NextDay()
     {
+
+        if (currentDay.dayNumber == 6)
+        {
+            SceneManager.LoadScene(0);
+        }
         foreach (DailyTask dailyTask in dailyTasks)
         {
             if(!dailyTask.complete)

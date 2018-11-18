@@ -102,10 +102,35 @@ public class DailyTask : MonoBehaviour {
         string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
         anim.SetBool("isActivatingRadio",true);
         anim.SetTrigger("activateRadio");
-        if (DayManager.Instance.muffledSound)
-            SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudioMuffled;
-        else
-            SoundManager.Instance.GetComponent<AudioSource>().clip = progressAudio;
+        SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.radioClip;
+        SoundManager.Instance.GetComponent<AudioSource>().Play();
+        complete = true;
+        foreach (string s in sentences)
+        {
+            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
+            yield return new WaitForSecondsRealtime(5.1f);
+        }
+        DayManager.Instance.IncrementTask();
+    }
+
+    public IEnumerator ReadJournal()
+    {
+        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
+        SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.journalClip;
+        SoundManager.Instance.GetComponent<AudioSource>().Play();
+        complete = true;
+        foreach (string s in sentences)
+        {
+            StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
+            yield return new WaitForSecondsRealtime(5.1f);
+        }
+        DayManager.Instance.IncrementTask();
+    }
+
+    public IEnumerator ChoosePillJournal()
+    {
+        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
+        SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         complete = true;
         foreach (string s in sentences)
