@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
 
     float moveSpeed = 2f;
+    bool canMove = true;
     bool canInteract = false;
 
     Vector3 forward, right, lastPosition;
@@ -52,7 +53,7 @@ public class Move : MonoBehaviour
         anim.SetBool("isMovingLeft",false);
         anim.SetBool("isMovingUp",false);
         anim.SetBool("isMovingRight",false);
-        if (Input.anyKey)
+        if (Input.anyKey && canMove)
         {
             Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
@@ -109,15 +110,22 @@ public class Move : MonoBehaviour
             else{ anim.SetBool("isMoving",false);}
         }
 
-        if(Input.GetKeyUp(KeyCode.Space)){
+        if(Input.GetKeyUp(KeyCode.Space) && canInteract){
             spaceHits++;
         }
         canInteract=(!interactionSpam)||(interactionSpam&&spaceHits>5);
         if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
-            Debug.Log("I INTERACTED");
-            interactiveObject.Interact();
-            spaceHits=0;
+            foreach(DailyTask dailyTask in DayManager.Instance.dailyTasks)
+            {
+                if(dailyTask.dailyTaskType == interactiveObject.dailyTaskType && !dailyTask.complete)
+                {
+                    StartCoroutine(StopMoving());
+                    Debug.Log("I INTERACTED");
+                    interactiveObject.Interact();
+                    spaceHits = 0;
+                }
+            }             
         }
     }
 
@@ -141,5 +149,16 @@ public class Move : MonoBehaviour
             canInteract = false;
             FloatingTextManager.Instance.HideText();
         }
+    }
+
+    public IEnumerator StopMoving()
+    {
+        canMove = false;
+        canInteract = false;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        yield return new WaitForSeconds(6f);
+        canMove = true;
+        canInteract = true;
     }
 }

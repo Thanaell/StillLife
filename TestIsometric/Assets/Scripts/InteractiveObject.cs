@@ -42,7 +42,6 @@ public class InteractiveObject : MonoBehaviour {
         {
             if(dailyTask.dailyTaskType == dailyTaskType)
             {
-                if(!dailyTask.complete)
                     dailyTask.StartTask();
             }
         }

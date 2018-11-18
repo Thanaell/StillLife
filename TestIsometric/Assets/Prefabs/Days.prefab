@@ -234,9 +234,24 @@ MonoBehaviour:
   postProcessingProfile: {fileID: 11400000, guid: 86a97fb6fe4e24c47b392995310c9ebb,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
   muffledSound: 1
-  audioclip: {fileID: 8300000, guid: 26cdb5439e562d848bcca1210d630787, type: 3}
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: a4a5c67a1fac75045b4ae5de2e74678d, type: 3}
+  plantHint: "Il est dans la fleur de l\u2019\xE2ge. T\u2019as compris ? Fleur, arbre\u2026\xE7a
+    te fait pas rire ? "
+  plantFail: "Tu as besoin d\u2019un rappel ? L\u2019eau va DANS le pot "
+  radioHint: "Des similitudes d\xE9couvertes dans plusieurs meurtres. \xE0 travers
+    4000 ans de notre histoire"
+  radioFail: 'Tu veux me faire mourir seul et con ? '
+  pillsHint: "La pilule bleue\u2026ou la pilule rouge ? "
+  pillsFail: "En fait, c\u2019\xE9tait la pilule verte\u2026 "
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: 8fd7121da4305a34abc63930d6c5dd55, type: 3}
+  journalClip: {fileID: 8300000, guid: 39c9ea1ebd9bd5344b4c914f2c865f64, type: 3}
+  pillsClip: {fileID: 8300000, guid: 2692d8b70654eec49b8e411fda9db6df, type: 3}
 --- !u!114 &114426491732284088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,13 +263,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a73d5e2dbffc4fb233725ed0d2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayNumber: 1
+  dayNumber: 5
   postProcessingProfile: {fileID: 11400000, guid: 6831c39d1e9804b1b8c176ac38c72d37,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
-  muffledSound: 0
-  audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  muffledSound: 1
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: 7e2a2ebb23dec364d81dc5860bf28e1d, type: 3}
+  plantHint: 
+  plantFail: 
+  radioHint: 
+  radioFail: 
+  pillsHint: 
+  pillsFail: 
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: 3783544283c4ada4eabff44155f5e06b, type: 3}
+  journalClip: {fileID: 8300000, guid: f6f5eaa87d9197846937497c2f3c2b29, type: 3}
+  pillsClip: {fileID: 8300000, guid: 16efa1a859a3e3844b30bc708cc00fbd, type: 3}
 --- !u!114 &114489937338939306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,9 +298,23 @@ MonoBehaviour:
   postProcessingProfile: {fileID: 11400000, guid: 04ae5c90ac578f544b5fbe830aa02514,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
   muffledSound: 0
-  audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: 38653ee598400c540a8f26b4547e7e7d, type: 3}
+  plantHint: "Elle ne poussera jamais si tu ne lui donnes pas \xE0 boire"
+  plantFail: "T\u2019as vraiment pas la main verte\u2026 "
+  radioHint: "Une femme a \xE9t\xE9 retrouv\xE9e morte chez elle. Selon la police,
+    elle serait morte de vieillesse."
+  radioFail: "T\u2019as raison, c\u2019est pas important les actualit\xE9s\u2026 "
+  pillsHint: "Je suis immortel, pourquoi j\u2019aurais besoin de m\xE9dicaments ? "
+  pillsFail: "Bon, d\u2019accord, j\u2019ai un rhume\u2026 "
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: e7c33ded29aaf02428cf7cde0a90a93b, type: 3}
+  journalClip: {fileID: 8300000, guid: 9992d3732bd0e7344a7aca7082891eb2, type: 3}
+  pillsClip: {fileID: 8300000, guid: f7d67a44069f3fb4eb8b85d48dc37eb9, type: 3}
 --- !u!114 &114672448729989596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,13 +326,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a73d5e2dbffc4fb233725ed0d2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayNumber: 1
+  dayNumber: 6
   postProcessingProfile: {fileID: 11400000, guid: e1b0a323bf3ee5947aa66f2d0977da03,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
-  muffledSound: 0
-  audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  muffledSound: 1
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: 7e2a2ebb23dec364d81dc5860bf28e1d, type: 3}
+  plantHint: 
+  plantFail: 
+  radioHint: 
+  radioFail: 
+  pillsHint: 
+  pillsFail: 
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: 3783544283c4ada4eabff44155f5e06b, type: 3}
+  journalClip: {fileID: 8300000, guid: f6f5eaa87d9197846937497c2f3c2b29, type: 3}
+  pillsClip: {fileID: 8300000, guid: 16efa1a859a3e3844b30bc708cc00fbd, type: 3}
 --- !u!114 &114757879802397356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,13 +357,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a73d5e2dbffc4fb233725ed0d2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayNumber: 1
+  dayNumber: 4
   postProcessingProfile: {fileID: 11400000, guid: 2983aac36b5cff74d9f3c88ec9b68c7c,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
-  muffledSound: 0
-  audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  muffledSound: 1
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: f395d9c918cf9e449aec32854655cbc8, type: 3}
+  plantHint: "Au moins \xE7a ne m\u2019arrivera jamais\u2026Tu ne peux pas faire quelque
+    chose ?"
+  plantFail: "Elle est vieille et fatigu\xE9e. Comme toi. Laisse-la mourir. Laisse-moi
+    tranquille. "
+  radioHint: "Breaking News. Notre atmosph\xE8re serait compos\xE9e \xE0 37% d\u2019entit\xE9s
+    surnaturelles "
+  radioFail: "\u2026Pourquoi t\u2019irais pas immortaliser quelqu\u2019un d\u2019autre
+    ?"
+  pillsHint: "Approche : \xAB C\u2019est l\u2019heure de ton m\xE9dicament, Papi ! "
+  pillsFail: "J\u2019esp\xE8re que tu finiras en EHPAD"
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: 3783544283c4ada4eabff44155f5e06b, type: 3}
+  journalClip: {fileID: 8300000, guid: f6f5eaa87d9197846937497c2f3c2b29, type: 3}
+  pillsClip: {fileID: 8300000, guid: 16efa1a859a3e3844b30bc708cc00fbd, type: 3}
 --- !u!114 &114925035135147390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,10 +392,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a73d5e2dbffc4fb233725ed0d2e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayNumber: 1
+  dayNumber: 3
   postProcessingProfile: {fileID: 11400000, guid: 6f1626039b0bae647b548de7451accfc,
     type: 2}
   inputDelay: 0
+  interactionSpam: 0
   inversedInput: 0
-  muffledSound: 0
-  audioclip: {fileID: 8300000, guid: bbedc6b0dd4816a409a9239f905e8366, type: 3}
+  muffledSound: 1
+  speedyDay: 0
+  audioclip: {fileID: 8300000, guid: e26f904fe7991084698bd2313bd959d8, type: 3}
+  plantHint: "J\u2026elle m\xE9rite mieux que \xE7a "
+  plantFail: "Tu n\u2019as donc aucune compassion ? Cette pauvre plante\u2026 "
+  radioHint: "Avec le temps va. tout s\u2019en va "
+  radioFail: 'Et maintenant ? Que vais-je faire ? De tout ce temps ? Que sera ma vie
+    ? '
+  pillsHint: "Les pilules\u2026c\u2019est pour toi en fait, non ?"
+  pillsFail: "J\u2019esp\xE8re que c\u2019est pas des pilules pour la m\xE9moire\u2026 "
+  journalHint: 
+  journalFail: 
+  radioClip: {fileID: 8300000, guid: f7837b584163e094ba44f5d8c6a0de70, type: 3}
+  journalClip: {fileID: 8300000, guid: 35a8dbd443bad0641bc9f42d7df4b4e3, type: 3}
+  pillsClip: {fileID: 8300000, guid: 4aa6551ccd54ea042adfb88c8f594fd0, type: 3}
