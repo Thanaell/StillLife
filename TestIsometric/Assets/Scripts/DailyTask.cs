@@ -22,6 +22,8 @@ public class DailyTask : MonoBehaviour {
     public AudioClip hintAudioMuffled;
     public AudioClip progressAudioMuffled;
 
+  
+
     public string hintText;
     public string succesText;
 
@@ -131,6 +133,7 @@ public class DailyTask : MonoBehaviour {
         string[] sentences = DayManager.Instance.currentDay.journalHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.journalClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
+        DayManager.Instance.journalCanvas.SetActive(true);
         complete = true;
         foreach (string s in sentences)
         {
@@ -142,11 +145,11 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator ChoosePill()
     {
-        Debug.Log("hello");
         string[] sentences = DayManager.Instance.currentDay.pillsHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         complete = true;
+        DayManager.Instance.pillCanvas.SetActive(true);
         foreach (string s in sentences)
         {
             StartCoroutine(FloatingTextManager.Instance.DisplayHideText(s, 5f));
