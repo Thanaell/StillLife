@@ -7,7 +7,8 @@ public enum DailyTaskType
     TurnOnRadioTask,
     WarteringPlantTask,
     Pills,
-    Sleep
+    Sleep,
+    Journal
 }
 
 public class DailyTask : MonoBehaviour {
@@ -55,6 +56,13 @@ public class DailyTask : MonoBehaviour {
             case DailyTaskType.Sleep:
                 StartCoroutine(DayManager.Instance.NextDay());
                 break;
+            case DailyTaskType.Pills:
+                Debug.Log("JE PRENDS MES MEDOCS");
+                StartCoroutine(ChoosePill());
+                break;
+            case DailyTaskType.Journal:
+                StartCoroutine(ReadJournal());
+                break;
             default:
                 DayManager.Instance.IncrementTask();
                 complete = true;
@@ -75,6 +83,12 @@ public class DailyTask : MonoBehaviour {
                 StartCoroutine(FloatingTextManager.Instance.DisplayHideText(DayManager.Instance.currentDay.plantHint));
                 break;
             case DailyTaskType.Sleep:
+                break;
+            case DailyTaskType.Pills:
+                StartCoroutine(FloatingTextManager.Instance.DisplayHideText(DayManager.Instance.currentDay.pillsHint));
+                break;
+            case DailyTaskType.Journal:
+                StartCoroutine(FloatingTextManager.Instance.DisplayHideText(DayManager.Instance.currentDay.journalHint));
                 break;
             default:
                 break;
@@ -115,7 +129,7 @@ public class DailyTask : MonoBehaviour {
 
     public IEnumerator ReadJournal()
     {
-        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
+        string[] sentences = DayManager.Instance.currentDay.journalHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.journalClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         complete = true;
@@ -127,9 +141,9 @@ public class DailyTask : MonoBehaviour {
         DayManager.Instance.IncrementTask();
     }
 
-    public IEnumerator ChoosePillJournal()
+    public IEnumerator ChoosePill()
     {
-        string[] sentences = DayManager.Instance.currentDay.radioHint.Split('.');
+        string[] sentences = DayManager.Instance.currentDay.pillsHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         complete = true;
