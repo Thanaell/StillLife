@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 4220391276737042}
   - component: {fileID: 23866982193124754}
   - component: {fileID: 102904940021418652}
+  - component: {fileID: 114828691329626088}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   - component: {fileID: 23707836903763392}
   - component: {fileID: 102786955622560390}
   - component: {fileID: 114240592015448710}
+  - component: {fileID: 114342467184494416}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -242,7 +244,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294919168
+    rgba: 4294967295
 --- !u!102 &102904940021418652
 TextMesh:
   serializedVersion: 3
@@ -254,7 +256,7 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 1
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 30
@@ -263,7 +265,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: f44de1c305b20a147beaedf394302c12, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294919168
+    rgba: 4294967295
 --- !u!114 &114240592015448710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,6 +279,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayTime: 4
   hint: {fileID: 102904940021418652}
+--- !u!114 &114342467184494416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1782651225821016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee01787749c09f488fa372c7f342f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelSize: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  resolutionDependant: 0
+  doubleResolution: 1024
 --- !u!114 &114384640870185626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,6 +305,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556c46e1ec2485f41a63189718f6deda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114828691329626088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487594033732536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee01787749c09f488fa372c7f342f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelSize: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  resolutionDependant: 0
+  doubleResolution: 1024
 --- !u!212 &212867755272505574
 SpriteRenderer:
   m_ObjectHideFlags: 1
