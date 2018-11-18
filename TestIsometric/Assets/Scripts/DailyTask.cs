@@ -133,7 +133,6 @@ public class DailyTask : MonoBehaviour {
         string[] sentences = DayManager.Instance.currentDay.journalHint.Split('.');
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.journalClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
-        //TODO: charger la bonne sprite selon le jour
         DayManager.Instance.journalCanvas.SetActive(true);
         complete = true;
         foreach (string s in sentences)
@@ -150,7 +149,6 @@ public class DailyTask : MonoBehaviour {
         SoundManager.Instance.GetComponent<AudioSource>().clip = DayManager.Instance.currentDay.pillsClip;
         SoundManager.Instance.GetComponent<AudioSource>().Play();
         complete = true;
-        //TODO: charger la bonne sprite selon le jour
         DayManager.Instance.pillCanvas.SetActive(true);
         foreach (string s in sentences)
         {
