@@ -110,20 +110,26 @@ public class Move : MonoBehaviour
             else{ anim.SetBool("isMoving",false);}
         }
 
-        if(Input.GetKeyUp(KeyCode.Space) && canInteract){
-            spaceHits++;
-        }
-        canInteract=(!interactionSpam)||(interactionSpam&&spaceHits>5);
+        Debug.Log(canInteract);
+        Debug.Log(spaceHits);
         if (canInteract && Input.GetKeyUp(KeyCode.Space) && interactiveObject)
         {
-            foreach(DailyTask dailyTask in DayManager.Instance.dailyTasks)
+            if(interactionSpam)
             {
-                if(dailyTask.dailyTaskType == interactiveObject.dailyTaskType && !dailyTask.complete)
+                spaceHits++;
+            }
+
+            foreach (DailyTask dailyTask in DayManager.Instance.dailyTasks)
+            {
+                if(!interactionSpam || interactionSpam && spaceHits > 2)
                 {
-                    StartCoroutine(StopMoving());
-                    Debug.Log("I INTERACTED");
-                    interactiveObject.Interact();
-                    spaceHits = 0;
+                    if (dailyTask.dailyTaskType == interactiveObject.dailyTaskType && !dailyTask.complete)
+                    {
+                        StartCoroutine(StopMoving());
+                        Debug.Log("I INTERACTED");
+                        interactiveObject.Interact();
+                        spaceHits = 0;
+                    }
                 }
             }             
         }
