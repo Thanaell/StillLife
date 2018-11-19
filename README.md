@@ -21,16 +21,16 @@ Chaque jour, votre vision se dégrade, les sons se brouillent, et le clavier ré
 
 *Sound design*
 
-Félix Belthoise
+- Félix Belthoise
 
 *Graphismes*
 
-Doriane Claireaux
+- Doriane Claireaux
 
 *Level design*
 
-Maxime Mignot
+- Maxime Mignot
 
 *Narration*
 
-Lucas Parraud
+- Lucas Parraud
