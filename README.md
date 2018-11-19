@@ -14,18 +14,23 @@ Chaque jour, votre vision se dégrade, les sons se brouillent, et le clavier ré
 **Crédits :**
 
 *Programmation*
--Delphine Cordat
--Gaëlle Clavelin
--Rova Randrianantoanina
+
+- Delphine Cordat
+- Gaëlle Clavelin
+- Rova Randrianantoanina
 
 *Sound design*
+
 Félix Belthoise
 
 *Graphismes*
+
 Doriane Claireaux
 
 *Level design*
+
 Maxime Mignot
 
 *Narration*
+
 Lucas Parraud
