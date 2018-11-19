@@ -9,3 +9,23 @@
 Chaque jour, votre vision se dégrade, les sons se brouillent, et le clavier répond de moins en moins.
 
 ![Jour 1](Capture2.PNG)    ![Jour 4](Capture3.PNG)
+
+
+**Crédits :**
+
+*Programmation*
+-Delphine Cordat
+-Gaëlle Clavelin
+-Rova Randrianantoanina
+
+*Sound design*
+Félix Belthoise
+
+*Graphismes*
+Doriane Claireaux
+
+*Level design*
+Maxime Mignot
+
+*Narration*
+Lucas Parraud
