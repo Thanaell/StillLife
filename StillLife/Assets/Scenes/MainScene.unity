@@ -860,6 +860,11 @@ Prefab:
       propertyPath: progressAudioMuffled
       value: 
       objectReference: {fileID: 8300000, guid: cd4abc6ce35530045ac13e1871130bdb, type: 3}
+    - target: {fileID: 82723998763089552, guid: b2fb37a806d4f7d44aedafd38209ba15,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fb37a806d4f7d44aedafd38209ba15, type: 2}
   m_IsPrefabAsset: 0
